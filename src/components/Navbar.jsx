@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, makeStyles, Button } from "@material-ui/core";
 import { useHistory } from "react-router";
 import Header from "./Header";
@@ -24,10 +24,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = (props) => {
+  console.log(props.name);
   const classes = useStyles();
   const history = useHistory();
+
   const [selectedPage, setSelectedPage] = useState("home");
+  const [appbarPosition, setAppbarPosition] = useState("static");
+
   const toolbarItemClicked = (event, page) => {
     event.preventDefault();
     if (page !== selectedPage) {
@@ -41,12 +45,24 @@ const Navbar = () => {
     history.push("/" + page);
   };
 
+  //
+  useEffect(() => {
+    //make navbar fixed on scroll
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 70) {
+        setAppbarPosition("fixed");
+      } else {
+        setAppbarPosition("static");
+      }
+    });
+  }, []);
+
   return (
     <div>
       <div>
         <Header />
       </div>
-      <AppBar position="sticky">
+      <AppBar id="appbar" position={appbarPosition}>
         <Toolbar className={classes.alignItemsAndJustifyContent}>
           <Button
             className={classes.selectedToolbarItem + " " + classes.toolbarItem}
