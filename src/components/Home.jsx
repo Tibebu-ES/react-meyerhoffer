@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper, Container, Box } from "@material-ui/core";
+import { Paper, Container, Box } from "@material-ui/core";
 import ReactPlayer from "react-player";
 import Carousel from "react-material-ui-carousel";
 import { ArrowRight, ArrowLeft } from "@material-ui/icons";
@@ -36,7 +36,11 @@ const Home = () => {
   function Item(props) {
     return (
       <Paper style={{ height: "500px" }}>
-        <img src={props.item.asset} style={{ height: "100%", width: "100%" }} />
+        <img
+          alt=""
+          src={props.item.asset}
+          style={{ height: "100%", width: "100%" }}
+        />
       </Paper>
     );
   }
@@ -54,7 +58,7 @@ const Home = () => {
         </Box>
         <Box m={5}>
           <Paper variant="outlined">
-            <img src={h3} style={{ width: "100%", height: "10px" }} />
+            <img alt="" src={h3} style={{ width: "100%", height: "10px" }} />
           </Paper>
         </Box>
         <Box m={5}>
@@ -84,7 +88,7 @@ const Home = () => {
         <Box display="flex" flexDirection="row">
           <Box m={5}>
             <Paper variant="outlined">
-              <img src={h3} style={{ width: "100%" }} />
+              <img alt="" src={h3} style={{ width: "100%" }} />
             </Paper>
           </Box>
           <Box m={5}>
