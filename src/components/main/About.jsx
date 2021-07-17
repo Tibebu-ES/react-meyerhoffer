@@ -12,11 +12,7 @@ import {
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import ReactPlayer from "react-player";
-
-import a1 from "../../assets/a1.gif";
-import a2 from "../../assets/a2.mp4";
-import a5 from "../../assets/a5.jpg";
-import a6 from "../../assets/a6.jpg";
+import { about_files } from "../data/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,17 +49,21 @@ const About = () => {
 
   return (
     <Container>
-      <Grid container>
-        <Grid item md={12} style={{ marginTop: "20px" }}>
-          <Paper align="center" style={{ height: "300px" }}>
-            <img src={a1} style={{ height: "100%", width: "70%" }} />
+      <Grid container spacing={2}>
+        <Grid item md={12}>
+          <Paper style={{ height: "500px" }}>
+            <img
+              src={about_files[0]}
+              style={{ height: "100%", width: "100%" }}
+              alt="meyerhoffer.com"
+            />
           </Paper>
         </Grid>
         <Grid item md={12}>
           <ReactPlayer
             playing={true}
             loop={true}
-            url={a2}
+            url={about_files[1]}
             width="100%"
             height="100%"
           />
@@ -89,7 +89,7 @@ const About = () => {
           <Typography variant="h6">SURFERS BLOOD</Typography>
           <Box display="flex" flexDirection="row">
             <Box md={6}>
-              <ReactPlayer playing={true} loop={true} url={a2} />
+              <ReactPlayer playing={true} loop={true} url={about_files[1]} />
             </Box>
             <Box md={6} style={{ marginLeft: "30px", marginTop: "80px" }}>
               <Typography variant="h6">Watch Surfers Blood movie</Typography>
@@ -103,7 +103,11 @@ const About = () => {
         </Grid>
         <Grid item md={12}>
           <Paper style={{ height: "500px" }}>
-            <img src={a6} style={{ height: "100%", width: "100%" }} />
+            <img
+              src={about_files[3]}
+              style={{ height: "100%", width: "100%" }}
+              alt="meyerhoffer.com"
+            />
           </Paper>
         </Grid>
       </Grid>
@@ -156,7 +160,11 @@ const About = () => {
           <AccordionDetails>
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
-                <img src={a5} style={{ height: "90%", width: "100%" }} />
+                <img
+                  src={about_files[2]}
+                  style={{ height: "90%", width: "100%" }}
+                  alt="meyerhoffer.com"
+                />
               </Grid>
               <Grid item xs={12} md={4} style={{ marginLeft: "30px" }}>
                 <Typography>

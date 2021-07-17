@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
-import object_files from "../data/index";
+import { object_files } from "../data/index";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -40,9 +40,9 @@ const Objects = () => {
       <Grid container spacing={10}>
         {object_files.map((file) => (
           <Grid item key={file} xs={12} sm={6} md={4}>
-            {file.asset == object_files[4].asset ||
-            file.asset == object_files[8].asset ||
-            file.asset == object_files[26].asset ? (
+            {file.asset === object_files[4].asset ||
+            file.asset === object_files[8].asset ||
+            file.asset === object_files[26].asset ? (
               <Card className={classes.card}>
                 <ReactPlayer
                   playing={true}
@@ -77,6 +77,7 @@ const Objects = () => {
                   className={classes.cardMedia}
                   image={file.asset}
                   component="img"
+                  alt="No Image"
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography variant="span">
