@@ -1,16 +1,13 @@
+// object component
 import h1 from "../../assets/1.jpg";
 import h2 from "../../assets/2.jpg";
 import h3 from "../../assets/3.jpg";
 import h4 from "../../assets/4.jpg";
-
 import h5 from "../../assets/5.mp4";
-
 import h6 from "../../assets/6.jpg";
 import h7 from "../../assets/7.jpg";
 import h8 from "../../assets/8.jpg";
-
 import h9 from "../../assets/9.mp4";
-
 import h10 from "../../assets/10.jpg";
 import h11 from "../../assets/11.jpg";
 import h12 from "../../assets/12.jpg";
@@ -32,7 +29,6 @@ import h27 from "../../assets/27.mp4";
 import h28 from "../../assets/28.jpg";
 import h29 from "../../assets/29.jpg";
 import h30 from "../../assets/30.jpg";
-
 import h31 from "../../assets/31.jpg";
 import h32 from "../../assets/32.jpg";
 import h33 from "../../assets/33.jpg";
@@ -42,6 +38,26 @@ import h36 from "../../assets/36.jpg";
 import h37 from "../../assets/37.jpg";
 import h38 from "../../assets/38.jpg";
 import h39 from "../../assets/39.jpg";
+
+// home component
+import c00 from "../../assets/h2.mp4";
+import c01 from "../../assets/h3.jpg";
+import c02 from "../../assets/h4.mp4";
+import c1 from "../../assets/c1.jpg";
+import c2 from "../../assets/c2.jpg";
+import c3 from "../../assets/c3.jpg";
+import c4 from "../../assets/c4.jpg";
+import c5 from "../../assets/c5.jpg";
+
+// about component
+import a1 from "../../assets/a1.gif";
+import a2 from "../../assets/a2.mp4";
+import a5 from "../../assets/a5.jpg";
+import a6 from "../../assets/a6.jpg";
+
+const about_files = [a1, a2, a5, a6];
+
+const home_files = [c00, c01, c02, c1, c2, c3, c4, c5];
 
 const object_files = [
   {
@@ -241,4 +257,4 @@ const object_files = [
   },
 ];
 
-export default object_files;
+export { object_files, home_files, about_files };

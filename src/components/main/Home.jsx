@@ -3,40 +3,25 @@ import { Paper, Container, Box, Button, Grid } from "@material-ui/core";
 import ReactPlayer from "react-player";
 import Carousel from "react-material-ui-carousel";
 import { ArrowRight, ArrowLeft } from "@material-ui/icons";
-
-import h2 from "../../assets/h2.mp4";
-import h3 from "../../assets/h3.jpg";
-import h4 from "../../assets/h4.mp4";
-
-import c1 from "../../assets/c1.jpg";
-import c2 from "../../assets/c2.jpg";
-import c3 from "../../assets/c3.jpg";
-import c4 from "../../assets/c4.jpg";
-import c5 from "../../assets/c5.jpg";
+import { home_files } from "../data/index";
 
 const Home = () => {
   var items = [
-    {
-      asset: c1,
-    },
-    {
-      asset: c2,
-    },
-    {
-      asset: c3,
-    },
-    {
-      asset: c4,
-    },
-    {
-      asset: c5,
-    },
+    home_files[3],
+    home_files[4],
+    home_files[5],
+    home_files[6],
+    home_files[7],
   ];
 
   function Item(props) {
     return (
       <Paper style={{ height: "550px" }}>
-        <img src={props.item.asset} style={{ height: "100%", width: "100%" }} />
+        <img
+          src={props.item}
+          style={{ height: "100%", width: "100%" }}
+          alt="Product"
+        />
       </Paper>
     );
   }
@@ -48,21 +33,25 @@ const Home = () => {
           <ReactPlayer
             playing={true}
             loop={true}
-            url={h2}
+            url={home_files[0]}
             width="100%"
             height="100%"
           />
         </Box>
         <Box m={5}>
           <Paper variant="outlined">
-            <img src={h3} style={{ width: "90%" }} />
+            <img
+              src={home_files[1]}
+              style={{ width: "90%" }}
+              alt="meyerhoffer.com"
+            />
           </Paper>
         </Box>
         <Box m={5}>
           <ReactPlayer
             playing={true}
             loop={true}
-            url={h4}
+            url={home_files[2]}
             width="100%"
             height="100%"
           />
@@ -85,14 +74,18 @@ const Home = () => {
         <Box display="flex" flexDirection="row">
           <Box m={5}>
             <Paper variant="outlined">
-              <img src={h3} style={{ width: "100%" }} />
+              <img
+                src={home_files[1]}
+                style={{ width: "100%" }}
+                alt="meyerhoffer.com"
+              />
             </Paper>
           </Box>
           <Box m={5}>
             <ReactPlayer
               playing={true}
               loop={true}
-              url={h4}
+              url={home_files[2]}
               width="100%"
               height="100%"
             />
