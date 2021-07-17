@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = (props) => {
-  console.log(props.name);
   const classes = useStyles();
   const history = useHistory();
 
@@ -43,6 +42,7 @@ const Navbar = (props) => {
       setSelectedPage(page);
     }
     history.push("/" + page);
+    window.scrollTo(0, 0);
   };
 
   //
