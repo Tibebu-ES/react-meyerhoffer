@@ -13,10 +13,10 @@ import {
 import { ExpandMore } from "@material-ui/icons";
 import ReactPlayer from "react-player";
 
-import a1 from "../assets/a1.gif";
-import a2 from "../assets/a2.mp4";
-import a5 from "../assets/a5.jpg";
-import a6 from "../assets/a6.jpg";
+import a1 from "../../assets/a1.gif";
+import a2 from "../../assets/a2.mp4";
+import a5 from "../../assets/a5.jpg";
+import a6 from "../../assets/a6.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
