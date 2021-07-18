@@ -136,12 +136,48 @@ const About = () => {
         </Grid>
 
         <Grid item md={12}>
-          <Paper style={{ height: "500px" }}>
-            <img
-              src={about_files[3]}
-              style={{ height: "100%", width: "100%" }}
-              alt="meyerhoffer.com"
-            />
+          <Paper style={{ background: "#B2B1B9" }}>
+            <Grid
+              container
+              display="flex"
+              justifyContent="space-around"
+              spacing={2}
+              className={classes.qoute_p}
+            >
+              <Grid item md={6}>
+                <Badge
+                  badgeContent="Listen"
+                  color="primary"
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Paper style={{ height: "50%", width: "90%" }}>
+                    <img
+                      src={about_files[3]}
+                      style={{ height: "100%", width: "100%" }}
+                      alt="meyerhoffer.com"
+                    />
+                  </Paper>
+                </Badge>
+              </Grid>
+              <Grid item md={5} style={{ alignSelf: "center" }}>
+                <Grid
+                  container
+                  direction="column"
+                  spacing={2}
+                  alignItems="center"
+                >
+                  <Grid item xs={12}>
+                    <Typography variant="span" marginBottom="10px">
+                      Play and listen to Thomas interviewing Tom Sachs for the
+                      Outside Genius Issue
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ReactAudioPlayer src={audio} controls />
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
       </Grid>
