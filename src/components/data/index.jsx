@@ -54,8 +54,9 @@ import a1 from "../../assets/a1.gif";
 import a2 from "../../assets/a2.mp4";
 import a5 from "../../assets/a5.jpg";
 import a6 from "../../assets/a6.jpg";
+import a7 from "../../assets/a7.mp4";
 
-const about_files = [a1, a2, a5, a6];
+const about_files = [a1, a2, a5, a6, a7];
 
 const home_files = [c00, c01, c02, c1, c2, c3, c4, c5];
 
