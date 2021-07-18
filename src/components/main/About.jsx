@@ -11,12 +11,18 @@ import {
   Grid,
   Badge,
   Chip,
+  Drawer,
+  Button,
+  IconButton,
+  Divider,
+  Link,
 } from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { ExpandMore, NavigateNext, CloudDownload } from "@material-ui/icons";
 import ReactPlayer from "react-player";
 import { about_files } from "../data/index";
 import ReactAudioPlayer from "react-audio-player";
 import audio from "../../assets/dialog.ogg";
+import LinkDetails from "./LinkDetails";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,11 +61,26 @@ const useStyles = makeStyles((theme) => ({
     background: "#3C5186",
     color: "#fff",
   },
+  drawerHeader: {
+    background: "#1768AC",
+  },
 }));
 
 const About = () => {
   const classes = useStyles();
   const [expanded, setExpanded] = useState("panel1");
+  const [open, setOpen] = useState(false);
+  const [chooser, setChooser] = useState("");
+
+  const handleDrawerOpen = (choose_view) => {
+    setChooser(choose_view);
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+    setChooser("");
+  };
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -187,7 +208,6 @@ const About = () => {
           </Paper>
         </Grid>
       </Grid>
-
       <div className={classes.root}>
         <Accordion
           className={classes.info}
@@ -261,19 +281,41 @@ const About = () => {
               </Grid>
               <Grid item xs={12} md={4} style={{ marginLeft: "30px" }}>
                 <Typography>
-                  <a href="#">Outside Magazine (Link)</a>
+                  <Button onClick={() => handleDrawerOpen("magazine")}>
+                    Outside Magazine (Link)
+                  </Button>
                 </Typography>
                 <Typography>
-                  <a href="#">Domus Magazine (PDF)</a>
+                  <Button
+                    startIcon={<CloudDownload />}
+                    component={Link}
+                    href={about_files[5]}
+                  >
+                    Domus Magazine (PDF)
+                  </Button>
                 </Typography>
                 <Typography>
-                  <a href="#"> The New York Times (PDF)</a>
+                  <Button
+                    startIcon={<CloudDownload />}
+                    component={Link}
+                    href={about_files[6]}
+                  >
+                    The New York Times (PDF)
+                  </Button>
                 </Typography>
                 <Typography>
-                  <a href="#">The Surfers Journal (Link)</a>
+                  <Button onClick={() => handleDrawerOpen("journal")}>
+                    The Surfers Journal (Link)
+                  </Button>
                 </Typography>
                 <Typography>
-                  <a href="#">Case de Abitare(PDF)</a>
+                  <Button
+                    startIcon={<CloudDownload />}
+                    component={Link}
+                    href={about_files[7]}
+                  >
+                    Case de Abitare(PDF)
+                  </Button>
                 </Typography>
               </Grid>
             </Grid>
@@ -733,6 +775,17 @@ const About = () => {
           </AccordionDetails>
         </Accordion>
       </div>
+
+      <Drawer anchor="right" open={open}>
+        <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose} style={{ color: "#fff" }}>
+            <NavigateNext />
+          </IconButton>
+        </div>
+
+        <Divider />
+        <LinkDetails chooser={chooser} />
+      </Drawer>
     </Container>
   );
 };
