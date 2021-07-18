@@ -49,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Open Sans",
     color: "#fff",
   },
+  biography_paper: {
+    padding: "10px",
+    background: "#3C5186",
+    color: "#fff",
+  },
 }));
 
 const About = () => {
@@ -196,25 +201,42 @@ const About = () => {
             <Typography className={classes.heading}>BIOGRAPHY</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Thomas Meyerhoffer is the acclaimed creator of an extraordinarily
-              diverse range of successful products with universal appeal. His
-              simple and intuitive designs are experienced every day by many
-              millions of users around the world.
-            </Typography>
-            <Typography>
-              After taking positions at Apple, IDEO and Porsche, Meyerhoffer
-              founded his integrated design studio in Montara, California, in
-              1999.
-            </Typography>
-            <Typography>
-              Meyerhoffer is the recipient of multiple international design
-              awards and patents. His work has been featured in The New York
-              Times, Outside Magazine and in Museums such as The Cooper Hewitt,
-              New York, SFMOMA, San Francisco and Design Museum, London.
-            </Typography>
+            <Grid container display="flex" direction="row" spacing={6}>
+              <Grid md={4} item>
+                <Paper className={classes.biography_paper}>
+                  <Typography align="justify">
+                    Thomas Meyerhoffer is the acclaimed creator of an
+                    extraordinarily diverse range of successful products with
+                    universal appeal. His simple and intuitive designs are
+                    experienced every day by many millions of users around the
+                    world.
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid md={4} item>
+                <Paper className={classes.biography_paper}>
+                  <Typography align="justify">
+                    After taking positions at Apple, IDEO and Porsche,
+                    Meyerhoffer founded his integrated design studio in Montara,
+                    California, in 1999.
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid md={4} item>
+                <Paper className={classes.biography_paper}>
+                  <Typography align="justify">
+                    Meyerhoffer is the recipient of multiple international
+                    design awards and patents. His work has been featured in The
+                    New York Times, Outside Magazine and in Museums such as The
+                    Cooper Hewitt, New York, SFMOMA, San Francisco and Design
+                    Museum, London.
+                  </Typography>
+                </Paper>
+              </Grid>
+            </Grid>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           className={classes.info}
           expanded={expanded === "panel2"}
@@ -238,13 +260,25 @@ const About = () => {
               </Grid>
               <Grid item xs={12} md={4} style={{ marginLeft: "30px" }}>
                 <Typography>
-                  Outside Magazine (Link) Domus Magazine (PDF) The New York
-                  Times (PDF) The Surfers Journal (Link) Case de Abitare(PDF)
+                  <a href="#">Outside Magazine (Link)</a>
+                </Typography>
+                <Typography>
+                  <a href="#">Domus Magazine (PDF)</a>
+                </Typography>
+                <Typography>
+                  <a href="#"> The New York Times (PDF)</a>
+                </Typography>
+                <Typography>
+                  <a href="#">The Surfers Journal (Link)</a>
+                </Typography>
+                <Typography>
+                  <a href="#">Case de Abitare(PDF)</a>
                 </Typography>
               </Grid>
             </Grid>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           className={classes.info}
           expanded={expanded === "panel3"}
@@ -275,26 +309,7 @@ const About = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          className={classes.info}
-          expanded={expanded === "panel4"}
-          onChange={handleChange("panel4")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMore />}
-            aria-controls="panel4bh-content"
-            id="panel4bh-header"
-          >
-            <Typography className={classes.heading}>SELECT PRESS</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat
-              lectus, varius pulvinar diam eros in elit. Pellentesque convallis
-              laoreet laoreet.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+
         <Accordion
           className={classes.info}
           expanded={expanded === "panel5"}
