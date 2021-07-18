@@ -55,8 +55,11 @@ import a2 from "../../assets/a2.mp4";
 import a5 from "../../assets/a5.jpg";
 import a6 from "../../assets/a6.jpg";
 import a7 from "../../assets/a7.mp4";
+import a8 from "../../assets/pdf/annual.pdf";
+import a9 from "../../assets/pdf/domus.pdf";
+import a10 from "../../assets/pdf/casedeabitare.pdf";
 
-const about_files = [a1, a2, a5, a6, a7];
+const about_files = [a1, a2, a5, a6, a7, , a8, a9, a10];
 
 const home_files = [c00, c01, c02, c1, c2, c3, c4, c5];
 
