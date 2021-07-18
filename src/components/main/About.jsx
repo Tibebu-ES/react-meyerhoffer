@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
 const About = () => {
   const classes = useStyles();
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState("panel1");
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -689,11 +689,47 @@ const About = () => {
             <Typography className={classes.heading}>SELECT PROJECTS</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Apple Black Diamond Cappellini Danger Device Flow Snowboarding
-              Latch Neil Pryde Windsurfing Nike Progio Scott Smith Sony Ericsson
-              Vodafone
-            </Typography>
+            <Grid container justifyContent="space-around" alignItems="center">
+              <Grid item>
+                <Chip label="Apple" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Black Diamond" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Cappellini" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Danger Device" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Flow Snowboarding" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Latch" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Neil Pryde Windsurfing" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Nike" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Progio" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Scott" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Smith" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Sony Ericsson" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Vodafone" color="secondary" />
+              </Grid>
+            </Grid>
           </AccordionDetails>
         </Accordion>
       </div>
