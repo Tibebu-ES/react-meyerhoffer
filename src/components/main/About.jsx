@@ -647,13 +647,35 @@ const About = () => {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Cooper Hewitt Triennial 2006 Blobjects & Beyond 2005 Future Design
-              Days 2005 Die Neue Sammlung 2000 SfMOMA, permanent collection 2000
-              Beyond the Hype, Scandinavian Design 2000
-            </Typography>
+            <Grid container justifyContent="space-around" alignItems="center">
+              <Grid item>
+                <Chip label="Cooper Hewitt Triennial 2006" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Blobjects & Beyond 2005" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Future Design Days 2005" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip label="Die Neue Sammlung 2000" color="secondary" />
+              </Grid>
+              <Grid item>
+                <Chip
+                  label="SfMOMA, permanent collection 2000"
+                  color="secondary"
+                />
+              </Grid>
+              <Grid item style={{ marginTop: "15px" }}>
+                <Chip
+                  label="Beyond the Hype, Scandinavian Design 2000"
+                  color="secondary"
+                />
+              </Grid>
+            </Grid>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           className={classes.info}
           expanded={expanded === "panel6"}
