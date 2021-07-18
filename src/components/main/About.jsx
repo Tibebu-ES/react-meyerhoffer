@@ -10,6 +10,7 @@ import {
   Box,
   Grid,
   Badge,
+  Chip,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import ReactPlayer from "react-player";
@@ -292,21 +293,342 @@ const About = () => {
             <Typography className={classes.heading}>RECOGNITION</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Good Design Australia (Latch) IDEA Award (Latch) IF Award Germany
-              (Latch) Good Design USA (Latch) 2017 IDEA Award (Latch) IDEA Award
-              (Invuity) Good Design Australia (Latch) Good Design Australia
-              (Invuity) 2016 Good design Australia (Latch) IF Award Germany
-              (Latch) IDEA Award (Latch) 2014 IDEA Awards (Slip In) 2013 Sacred
-              Craft Best In Show (Slip In) 2012 Design Museum London (Surfboard)
-              2010 D&Ad Yellow Pencil (Surfboard) Good Design Australia
-              (Surfboard) IDEA Awards (Surfboard) I.D. Magazine Awards
-              (Surfboard) 2009 IDEA Awards (Tork) IF Awards (Tork) Red Dot
-              Awards (Tork) 2003 IF Awards (Neil Pryde) IF Awards (Flow) &Red
-              Dot Awards (Neil Pryde) Red Dot Awards (Flow) Wired (Danger Hip
-              Top) 1997 D&Ad Yellow Pencil (NEC) IF Awards Germany (Apple) Good
-              Design USA (Apple) I.D. Magazine Awards (Apple)
-            </Typography>
+            <Grid
+              container
+              spacing={2}
+              direction="row"
+              justifyContent="space-evenly"
+            >
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={2018}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="Good Design Australia (Latch)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="IDEA Award (Latch)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="IF Award Germany (Latch)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="Good Design USA (Latch) (Latch)"
+                        color="secondary"
+                      />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={2017}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip label="IDEA Award (Latch)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="IDEA Award (Invuity)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="Good Design Australia (Latch)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="Good Design Australia (Invuity)"
+                        color="secondary"
+                      />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={2016}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="Good design Australia (Latch)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="IF Award Germany (Latch)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="IDEA Award (Latch)" color="secondary" />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={2010}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="D&Ad Yellow Pencil (Surfboard)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="Good Design Australia (Surfboard)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="IDEA Awards (Surfboard)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="I.D. Magazine Awards (Surfboard)"
+                        color="secondary"
+                      />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={2009}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip label="IDEA Awards (Tork)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="IF Awards (Tork)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="Red Dot Awards (Tork)" color="secondary" />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={2003}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip label="IF Awards (Neil Pryde)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="IF Awards (Flow)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="&Red Dot Awards (Neil Pryde)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="Red Dot Awards (Flow)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="Wired (Danger Hip Top)" color="secondary" />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Badge
+                  badgeContent={1997}
+                  max={3000}
+                  color="primary"
+                  style={{
+                    background: "#A2DBFA",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                >
+                  <Grid container display="flex" direction="column" spacing={2}>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="D&Ad Yellow Pencil (NEC)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="IF Awards Germany (Apple)"
+                        color="secondary"
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip label="Good Design USA (Apple)" color="secondary" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Chip
+                        label="I.D. Magazine Awards (Apple)"
+                        color="secondary"
+                      />
+                    </Grid>
+                  </Grid>
+                </Badge>
+              </Grid>
+
+              <Grid item md={3}>
+                <Grid container direction="column" spacing={2}>
+                  <Grid item md={3}>
+                    <Badge
+                      badgeContent={2014}
+                      max={3000}
+                      color="primary"
+                      style={{
+                        background: "#A2DBFA",
+                        padding: "10px",
+                        borderRadius: "10px",
+                      }}
+                      anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                    >
+                      <Grid
+                        container
+                        display="flex"
+                        direction="column"
+                        spacing={2}
+                      >
+                        <Grid item xs={12}>
+                          <Chip
+                            label="IDEA Awards (Slip In)"
+                            color="secondary"
+                          />
+                        </Grid>
+                      </Grid>
+                    </Badge>
+                  </Grid>
+
+                  <Grid item md={3}>
+                    <Badge
+                      badgeContent={2013}
+                      max={3000}
+                      color="primary"
+                      style={{
+                        background: "#A2DBFA",
+                        padding: "10px",
+                        borderRadius: "10px",
+                      }}
+                      anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                    >
+                      <Grid
+                        container
+                        display="flex"
+                        direction="column"
+                        spacing={2}
+                      >
+                        <Grid item xs={12}>
+                          <Chip
+                            label="Sacred Craft Best In Show (Slip In)"
+                            color="secondary"
+                          />
+                        </Grid>
+                      </Grid>
+                    </Badge>
+                  </Grid>
+
+                  <Grid item md={3}>
+                    <Badge
+                      badgeContent={2012}
+                      max={3000}
+                      color="primary"
+                      style={{
+                        background: "#A2DBFA",
+                        padding: "10px",
+                        borderRadius: "10px",
+                      }}
+                      anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                    >
+                      <Grid
+                        container
+                        display="flex"
+                        direction="column"
+                        spacing={2}
+                      >
+                        <Grid item xs={12}>
+                          <Chip
+                            label="Design Museum London (Surfboard)"
+                            color="secondary"
+                          />
+                        </Grid>
+                      </Grid>
+                    </Badge>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
           </AccordionDetails>
         </Accordion>
 
