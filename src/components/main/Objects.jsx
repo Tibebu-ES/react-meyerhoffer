@@ -1,17 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Container,
-  Typography,
-  Grid,
-  CardMedia,
-  CardContent,
-  Card,
-  Box,
-} from "@material-ui/core";
-import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
+import { Container, Grid, Chip } from "@material-ui/core";
 import { object_files } from "../data/index";
+import SingleAlbum from "./SingleAlbum";
+import { ArrowBack } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -30,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
   itemLink: {
     textDecoration: "none",
   },
+  topTitle: {
+    marginBottom: "30px",
+    marginTop: "-60px",
+  },
 }));
 
 const Objects = () => {
@@ -37,67 +33,33 @@ const Objects = () => {
 
   return (
     <Container className={classes.cardGrid} maxWidth="lg">
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        spacing={3}
+        className={classes.topTitle}
+      >
+        <Grid item xs={1}>
+          <Chip label="Shop" color="secondary" />
+        </Grid>
+        <Grid item xs={1}>
+          <Chip
+            icon={<ArrowBack />}
+            label="Everything has a price"
+            color="secondary"
+          />
+        </Grid>
+      </Grid>
       <Grid container spacing={10}>
         {object_files.map((file) => (
           <Grid item key={file} xs={12} sm={6} md={4}>
             {file.asset === object_files[4].asset ||
             file.asset === object_files[8].asset ||
             file.asset === object_files[26].asset ? (
-              <Card className={classes.card}>
-                <ReactPlayer
-                  playing={true}
-                  loop={true}
-                  url={file.asset}
-                  width="100%"
-                  height="100%"
-                />
-
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="span">
-                    <Box display="flex" flexDirection="column">
-                      <Box>
-                        <Link to="/" className={classes.itemLink}>
-                          {" "}
-                          {file.caption}
-                        </Link>
-                      </Box>
-                      <Box>
-                        <Link to="/" className={classes.itemLink}>
-                          {" "}
-                          {file.price}
-                        </Link>
-                      </Box>
-                    </Box>
-                  </Typography>
-                </CardContent>
-              </Card>
+              <SingleAlbum file={file} fileType="video" />
             ) : (
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={file.asset}
-                  component="img"
-                  alt="No Image"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="span">
-                    <Box display="flex" flexDirection="column">
-                      <Box>
-                        <Link to="/" className={classes.itemLink}>
-                          {" "}
-                          {file.caption}
-                        </Link>
-                      </Box>
-                      <Box>
-                        <Link to="/" className={classes.itemLink}>
-                          {" "}
-                          {file.price}
-                        </Link>
-                      </Box>
-                    </Box>
-                  </Typography>
-                </CardContent>
-              </Card>
+              <SingleAlbum file={file} fileType="image" />
             )}
           </Grid>
         ))}
