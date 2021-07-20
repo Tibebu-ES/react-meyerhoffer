@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import ReactPlayer from "react-player";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -34,12 +35,23 @@ const SingleAlbum = (props) => {
   return (
     <>
       <Card className={classes.card}>
-        <CardMedia
-          className={classes.cardMedia}
-          image={props.file.asset}
-          component="img"
-          alt="No Image"
-        />
+        {props.fileType === "video" ? (
+          <ReactPlayer
+            playing={true}
+            loop={true}
+            url={props.file.asset}
+            width="100%"
+            height="100%"
+          />
+        ) : (
+          <CardMedia
+            className={classes.cardMedia}
+            image={props.file.asset}
+            component="img"
+            alt="No Image"
+          />
+        )}
+
         <CardContent className={classes.cardContent}>
           <Typography variant="span">
             <Box display="flex" flexDirection="column">
@@ -52,7 +64,7 @@ const SingleAlbum = (props) => {
               <Box>
                 <Link to="/" className={classes.itemLink}>
                   {" "}
-                  {props.file.price}
+                  <strong>{props.file.price}</strong>
                 </Link>
               </Box>
             </Box>
