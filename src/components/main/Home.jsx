@@ -16,7 +16,7 @@ import Carousel from "react-material-ui-carousel";
 import { ArrowRight, ArrowLeft, NavigateBefore } from "@material-ui/icons";
 import { home_files } from "../data/index";
 import { makeStyles } from "@material-ui/core/styles";
-import LinkLatch from "./bottom_links/LinkLatch";
+import BottomLinks from "./bottom_links/BottomLinks";
 
 const useStyles = makeStyles((theme) => ({
   drawerHeader: {
@@ -344,7 +344,7 @@ const Home = () => {
           </IconButton>
         </div>
         <Divider />
-        <LinkLatch />
+        <BottomLinks />
       </Drawer>
     </Container>
   );
