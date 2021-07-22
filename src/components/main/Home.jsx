@@ -1,9 +1,31 @@
-import React from "react";
-import { Paper, Container, Box, Button, Grid } from "@material-ui/core";
+import React, { useState } from "react";
+import {
+  Paper,
+  Container,
+  Box,
+  Button,
+  Grid,
+  Badge,
+  Typography,
+  Drawer,
+  IconButton,
+  Divider,
+} from "@material-ui/core";
 import ReactPlayer from "react-player";
 import Carousel from "react-material-ui-carousel";
-import { ArrowRight, ArrowLeft } from "@material-ui/icons";
+import { ArrowRight, ArrowLeft, NavigateBefore } from "@material-ui/icons";
 import { home_files } from "../data/index";
+import { makeStyles } from "@material-ui/core/styles";
+import LinkLatch from "./bottom_links/LinkLatch";
+
+const useStyles = makeStyles((theme) => ({
+  drawerHeader: {
+    background: "#1768AC",
+  },
+  navIcon: {
+    color: "#fff",
+  },
+}));
 
 const Home = () => {
   var items = [
@@ -14,6 +36,9 @@ const Home = () => {
     home_files[7],
   ];
 
+  const classes = useStyles();
+  const [open, setOpen] = useState(false);
+
   function Item(props) {
     return (
       <Paper style={{ height: "550px" }}>
@@ -22,9 +47,18 @@ const Home = () => {
           style={{ height: "100%", width: "100%" }}
           alt="Product"
         />
+        <Typography variant="h6">{props.item.caption}</Typography>
       </Paper>
     );
   }
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Container>
@@ -92,6 +126,7 @@ const Home = () => {
           </Box>
         </Box>
 
+        {/*bootom links */}
         <Grid
           container
           direction="row"
@@ -99,117 +134,218 @@ const Home = () => {
           style={{ marginBottom: "20px" }}
         >
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Mike Bloomberg Presidential Stragety
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Design Patents
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               A life as a surfer
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Surfboard designer
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Coca-Cola Glass
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               100 Million users every day
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Cappellini chair
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Outside Magazine cover story
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Occasional race car dirver
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Thomas talks with Tom Sachs
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Multiple International design awards
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Apple design group
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Colette Paris
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Slip In single fin
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Start Up design and brand strategy
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Bald Face home made snowboard
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Soft Computer
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               First modern ski goggle
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Porsche Design Intern
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Up-cycled Snowboard
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Medical design
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" color="primary" href="#">
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen()}
+            >
               Surfer surfing the boards all over the world
             </Button>
           </Grid>
         </Grid>
       </Box>
+      <Drawer variant="persistent" anchor="left" open={open}>
+        <div className={classes.drawerHeader}>
+          <IconButton
+            onClick={handleDrawerClose}
+            className={classes.navIcon}
+            edge="end"
+          >
+            <NavigateBefore />
+          </IconButton>
+        </div>
+        <Divider />
+        <LinkLatch />
+      </Drawer>
     </Container>
   );
 };
