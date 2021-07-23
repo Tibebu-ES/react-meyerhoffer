@@ -1,0 +1,19 @@
+@import "font.css";
+
+.app_root {
+  background: #fafafa;
+  padding: 10px;
+  font-family: Century;
+}
+
+.content_font {
+  font-family: Uchen;
+}
+
+.title_gent {
+  font-family: GenathDisplay;
+}
+
+.main_font {
+  font-family: Century;
+}

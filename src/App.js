@@ -2,10 +2,11 @@ import React from "react";
 import { Home, About, Objects, Navbar, Footer } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
+import "./assets/css/app.css";
 
 function App() {
   return (
-    <div>
+    <div className="app_root">
       <Header />
       <Navbar />
       <Switch>
