@@ -65,6 +65,15 @@ import c17 from "../../assets/hb_link6/bcoca3.jpg";
 import c18 from "../../assets/hb_link6/bcoca5.jpg";
 import c19 from "../../assets/hb_link6/bcoca6.jpg";
 import c20 from "../../assets/hb_link6/bcoca7.jpg";
+import c21 from "../../assets/hb_link7/b100_1.jpg";
+import c22 from "../../assets/hb_link7/b100_2.jpg";
+import c23 from "../../assets/hb_link7/b100_3.jpg";
+import c24 from "../../assets/hb_link7/b100_4.jpg";
+import c25 from "../../assets/hb_link7/b100_5.jpg";
+import c26 from "../../assets/hb_link7/b100_6.jpg";
+import c27 from "../../assets/hb_link7/b100_7.jpg";
+import c28 from "../../assets/hb_link7/b100_8.jpg";
+import c29 from "../../assets/hb_link7/b100_9.jpg";
 
 // about component
 import a1 from "../../assets/a1.gif";
@@ -131,6 +140,15 @@ const home_files = [
   c18,
   c19,
   c20,
+  c21,
+  c22,
+  c23,
+  c24,
+  c25,
+  c26,
+  c27,
+  c28,
+  c29,
 ];
 
 const object_files = [

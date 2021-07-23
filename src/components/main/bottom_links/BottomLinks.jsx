@@ -3,6 +3,7 @@ import LinkLatch from "./LinkLatch";
 import LinkBloomberg from "./LinkBloomberg";
 import LinkCoca from "./LinkCoca";
 import { makeStyles } from "@material-ui/core/styles";
+import LinkHundred from "./LinkHundred";
 
 const useStyles = makeStyles(() => ({
   wrapper: {
@@ -21,6 +22,8 @@ const BottomLinks = ({ choose }) => {
         <LinkBloomberg />
       ) : choose === "coca" ? (
         <LinkCoca />
+      ) : choose === "hundred" ? (
+        <LinkHundred />
       ) : (
         ""
       )}

@@ -194,7 +194,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("hundred")}
             >
               100 Million users every day
             </Button>
