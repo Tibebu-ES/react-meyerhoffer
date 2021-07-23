@@ -43,11 +43,48 @@ import h39 from "../../assets/39.jpg";
 import c00 from "../../assets/h2.mp4";
 import c01 from "../../assets/h3.jpg";
 import c02 from "../../assets/h4.mp4";
+import c03 from "../../assets/h5.mp4";
+import c04 from "../../assets/h6.mp4";
 import c1 from "../../assets/c1.jpg";
 import c2 from "../../assets/c2.jpg";
 import c3 from "../../assets/c3.jpg";
 import c4 from "../../assets/c4.jpg";
 import c5 from "../../assets/c5.jpg";
+import c6 from "../../assets/hb_link1/blatch1.jpg";
+import c7 from "../../assets/hb_link1/blatch2.jpg";
+import c8 from "../../assets/hb_link1/blatch3.jpg";
+import c9 from "../../assets/hb_link1/blatch4.jpg";
+import c10 from "../../assets/pdf/Unlocking.pdf";
+import c11 from "../../assets/hb_link1/blatch5.jpg";
+import c12 from "../../assets/hb_link2/btm_bloomberg1.jpg";
+import c13 from "../../assets/hb_link2/btm_bloomberg2.jpg";
+import c14 from "../../assets/hb_link2/btm_bloomberg3.jpg";
+import c15 from "../../assets/hb_link6/bcoca1.jpg";
+import c16 from "../../assets/hb_link6/bcoca2.jpg";
+import c17 from "../../assets/hb_link6/bcoca3.jpg";
+import c18 from "../../assets/hb_link6/bcoca5.jpg";
+import c19 from "../../assets/hb_link6/bcoca6.jpg";
+import c20 from "../../assets/hb_link6/bcoca7.jpg";
+import c21 from "../../assets/hb_link7/b100_1.jpg";
+import c22 from "../../assets/hb_link7/b100_2.jpg";
+import c23 from "../../assets/hb_link7/b100_3.jpg";
+import c24 from "../../assets/hb_link7/b100_4.jpg";
+import c25 from "../../assets/hb_link7/b100_5.jpg";
+import c26 from "../../assets/hb_link7/b100_6.jpg";
+import c27 from "../../assets/hb_link7/b100_7.jpg";
+import c28 from "../../assets/hb_link7/b100_8.jpg";
+import c29 from "../../assets/hb_link7/b100_9.jpg";
+import c30 from "../../assets/hb_link13/bapple1.jpg";
+import c31 from "../../assets/hb_link17/bbald_1.jpg";
+import c32 from "../../assets/hb_link17/bbald_2.jpg";
+import c33 from "../../assets/hb_link17/bbald_3.jpg";
+import c34 from "../../assets/hb_link17/bbald_4.jpg";
+import c35 from "../../assets/hb_link18/bsoft_0.jpg";
+import c36 from "../../assets/hb_link18/bsoft_01.jpg";
+import c37 from "../../assets/hb_link18/bsoft_1.jpg";
+import c38 from "../../assets/hb_link18/bsoft_2.jpg";
+import c39 from "../../assets/hb_link18/bsoft_2.1.jpg";
+import c40 from "../../assets/hb_link18/bsoft_3.jpg";
 
 // about component
 import a1 from "../../assets/a1.gif";
@@ -61,7 +98,80 @@ import a10 from "../../assets/pdf/casedeabitare.pdf";
 
 const about_files = [a1, a2, a5, a6, a7, , a8, a9, a10];
 
-const home_files = [c00, c01, c02, c1, c2, c3, c4, c5];
+const home_files = [
+  c00,
+  c01,
+  c02,
+  c03,
+  c04,
+  {
+    asset: c1,
+    caption: "Apple Emate",
+  },
+  {
+    asset: c2,
+    caption: "Coca-Cola",
+  },
+  {
+    asset: c3,
+    caption: "Cappelline",
+  },
+  {
+    asset: c4,
+    caption: " Mike Bloomberg For President",
+  },
+  {
+    asset: c5,
+    caption: "Latch",
+  },
+  {
+    img: c6,
+    title: "Use of Latch Lens",
+  },
+  {
+    img: c7,
+    title: "Latch",
+  },
+  {
+    img: c8,
+    title: "Design",
+  },
+  {
+    img: c9,
+    title: "Collection",
+  },
+  c10,
+  c11,
+  c12,
+  c13,
+  c14,
+  c15,
+  c16,
+  c17,
+  c18,
+  c19,
+  c20,
+  c21,
+  c22,
+  c23,
+  c24,
+  c25,
+  c26,
+  c27,
+  c28,
+  c29,
+  c30,
+  c31,
+  c32,
+  c33,
+  c34,
+  c35,
+  c36,
+  c37,
+  c38,
+  c39,
+  c40,
+];
 
 const object_files = [
   {

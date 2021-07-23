@@ -5,6 +5,10 @@ import ab1 from "../../assets/ab1.jpg";
 import ab2 from "../../assets/ab2.jpg";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    background: "#B6C9F0",
+    fontFamily: "Century",
+  },
   para_big: {
     marginLeft: "40px",
     marginRight: "40px",
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 const AboutJournal = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="column" style={{ background: "#B6C9F0" }}>
+    <Grid container direction="column" className={classes.root}>
       <Grid item xs={12} className={classes.para_title}>
         <Typography variant="h4" align="center">
           The Surfers Journal

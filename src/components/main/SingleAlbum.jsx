@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   itemLink: {
     textDecoration: "none",
+    fontFamily: "Century",
   },
 }));
 
@@ -33,45 +34,43 @@ const SingleAlbum = (props) => {
   const classes = useStyles();
 
   return (
-    <>
-      <Card className={classes.card}>
-        {props.fileType === "video" ? (
-          <ReactPlayer
-            playing={true}
-            loop={true}
-            url={props.file.asset}
-            width="100%"
-            height="100%"
-          />
-        ) : (
-          <CardMedia
-            className={classes.cardMedia}
-            image={props.file.asset}
-            component="img"
-            alt="No Image"
-          />
-        )}
+    <Card className={classes.card}>
+      {props.fileType === "video" ? (
+        <ReactPlayer
+          playing={true}
+          loop={true}
+          url={props.file.asset}
+          width="100%"
+          height="100%"
+        />
+      ) : (
+        <CardMedia
+          className={classes.cardMedia}
+          image={props.file.asset}
+          component="img"
+          alt="No Image"
+        />
+      )}
 
-        <CardContent className={classes.cardContent}>
-          <Typography variant="span">
-            <Box display="flex" flexDirection="column">
-              <Box>
-                <Link to="/" className={classes.itemLink}>
-                  {" "}
-                  {props.file.caption}
-                </Link>
-              </Box>
-              <Box>
-                <Link to="/" className={classes.itemLink}>
-                  {" "}
-                  <strong>{props.file.price}</strong>
-                </Link>
-              </Box>
+      <CardContent className={classes.cardContent}>
+        <Typography variant="span">
+          <Box display="flex" flexDirection="column">
+            <Box>
+              <Link to="/" className={classes.itemLink}>
+                {" "}
+                {props.file.caption}
+              </Link>
             </Box>
-          </Typography>
-        </CardContent>
-      </Card>
-    </>
+            <Box>
+              <Link to="/" className={classes.itemLink}>
+                {" "}
+                <strong>{props.file.price}</strong>
+              </Link>
+            </Box>
+          </Box>
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };
 
