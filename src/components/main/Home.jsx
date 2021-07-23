@@ -38,6 +38,7 @@ const Home = () => {
 
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [choose, setChoose] = useState(false);
 
   function Item(props) {
     return (
@@ -52,12 +53,14 @@ const Home = () => {
     );
   }
 
-  const handleDrawerOpen = () => {
+  const handleDrawerOpen = (choose) => {
+    setChoose(choose);
     setOpen(true);
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
+    setChoose("");
   };
 
   return (
@@ -137,7 +140,16 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("latch")}
+            >
+              Latch start up going public @ 1.6B
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => handleDrawerOpen("bloomberg")}
             >
               Mike Bloomberg Presidential Stragety
             </Button>
@@ -344,7 +356,7 @@ const Home = () => {
           </IconButton>
         </div>
         <Divider />
-        <BottomLinks />
+        <BottomLinks choose={choose} />
       </Drawer>
     </Container>
   );

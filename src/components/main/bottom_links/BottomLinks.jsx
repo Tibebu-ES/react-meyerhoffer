@@ -1,5 +1,6 @@
 import React from "react";
 import LinkLatch from "./LinkLatch";
+import LinkBloomberg from "./LinkBloomberg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
@@ -9,11 +10,17 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const BottomLinks = () => {
+const BottomLinks = ({ choose }) => {
   const classes = useStyles();
   return (
     <div className={classes.wrapper}>
-      <LinkLatch />
+      {choose === "latch" ? (
+        <LinkLatch />
+      ) : choose === "bloomberg" ? (
+        <LinkBloomberg />
+      ) : (
+        ""
+      )}
     </div>
   );
 };
