@@ -248,7 +248,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("apple")}
             >
               Apple design group
             </Button>
