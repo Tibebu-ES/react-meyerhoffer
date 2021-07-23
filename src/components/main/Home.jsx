@@ -29,11 +29,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   var items = [
-    home_files[3],
-    home_files[4],
     home_files[5],
     home_files[6],
     home_files[7],
+    home_files[8],
+    home_files[9],
   ];
 
   const classes = useStyles();
@@ -44,7 +44,7 @@ const Home = () => {
     return (
       <Paper style={{ height: "550px" }}>
         <img
-          src={props.item}
+          src={props.item.asset}
           style={{ height: "100%", width: "100%" }}
           alt="Product"
         />
@@ -185,7 +185,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("coca")}
             >
               Coca-Cola Glass
             </Button>

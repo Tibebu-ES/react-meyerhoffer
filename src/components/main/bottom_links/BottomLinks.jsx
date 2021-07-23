@@ -1,6 +1,7 @@
 import React from "react";
 import LinkLatch from "./LinkLatch";
 import LinkBloomberg from "./LinkBloomberg";
+import LinkCoca from "./LinkCoca";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
@@ -18,6 +19,8 @@ const BottomLinks = ({ choose }) => {
         <LinkLatch />
       ) : choose === "bloomberg" ? (
         <LinkBloomberg />
+      ) : choose === "coca" ? (
+        <LinkCoca />
       ) : (
         ""
       )}

@@ -59,6 +59,12 @@ import c11 from "../../assets/hb_link1/blatch5.jpg";
 import c12 from "../../assets/hb_link2/btm_bloomberg1.jpg";
 import c13 from "../../assets/hb_link2/btm_bloomberg2.jpg";
 import c14 from "../../assets/hb_link2/btm_bloomberg3.jpg";
+import c15 from "../../assets/hb_link6/bcoca1.jpg";
+import c16 from "../../assets/hb_link6/bcoca2.jpg";
+import c17 from "../../assets/hb_link6/bcoca3.jpg";
+import c18 from "../../assets/hb_link6/bcoca5.jpg";
+import c19 from "../../assets/hb_link6/bcoca6.jpg";
+import c20 from "../../assets/hb_link6/bcoca7.jpg";
 
 // about component
 import a1 from "../../assets/a1.gif";
@@ -119,6 +125,12 @@ const home_files = [
   c12,
   c13,
   c14,
+  c15,
+  c16,
+  c17,
+  c18,
+  c19,
+  c20,
 ];
 
 const object_files = [
