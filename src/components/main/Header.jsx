@@ -10,11 +10,14 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "20px",
   },
   header_child_player: {
-    padding: "5px",
+    padding: "10px",
   },
   header_child_typo: {
-    paddingTop: "20px",
-    marginLeft: "20px",
+    paddingTop: "10px",
+  },
+  header_child_typo_parag: {
+    fontSize: "14px",
+    fontFamily: "Century",
   },
 }));
 
@@ -32,7 +35,11 @@ const Header = () => {
         />
       </Grid>
       <Grid xs={12} item md={8} className={classes.header_child_typo}>
-        <Typography variant="body1" align="justify">
+        <Typography
+          variant="body1"
+          align="justify"
+          className={classes.header_child_typo_parag}
+        >
           Born in Sweden in 1965, Thomas Meyerhoffer is a creator and visionary.
           After earning a degree in Industrial Design from Art Center, he
           started his journey with an internship at Porsche, only to Go West to

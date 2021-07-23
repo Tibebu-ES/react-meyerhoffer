@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(20),
     flexBasis: "33.33%",
     flexShrink: 0,
-    fontFamily: "bold",
+    fontFamily: "Century",
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   qoute_p: {
     padding: "45px",
-    fontFamily: "Open Sans",
+    fontFamily: "Century",
     color: "#fff",
   },
   biography_paper: {
@@ -148,11 +148,13 @@ const About = () => {
               <ReactPlayer controls={true} url={about_files[4]} />
             </Box>
             <Box md={6} style={{ marginLeft: "35px", marginTop: "80px" }}>
-              <Typography variant="h6">Watch Surfers Blood movie</Typography>
+              <Typography variant="h6" style={{ fontFamily: "Century" }}>
+                Watch Surfers Blood movie
+              </Typography>
               <Typography
                 variant="body1"
                 paragraph
-                style={{ marginTop: "10px" }}
+                style={{ marginTop: "10px", fontFamily: "Century" }}
               >
                 By renowned filmmaker Patrick Trefz explores the essence of the
                 sport he loves by profiling those who inspire him, from Basque
@@ -194,7 +196,11 @@ const About = () => {
                   alignItems="center"
                 >
                   <Grid item xs={12}>
-                    <Typography variant="span" marginBottom="10px">
+                    <Typography
+                      variant="span"
+                      marginBottom="10px"
+                      style={{ fontFamily: "Century" }}
+                    >
                       Play and listen to Thomas interviewing Tom Sachs for the
                       Outside Genius Issue
                     </Typography>
@@ -225,7 +231,10 @@ const About = () => {
             <Grid container display="flex" direction="row" spacing={6}>
               <Grid md={4} item>
                 <Paper className={classes.biography_paper}>
-                  <Typography align="justify">
+                  <Typography
+                    align="justify"
+                    style={{ fontFamily: "Century", fontSize: "14px" }}
+                  >
                     Thomas Meyerhoffer is the acclaimed creator of an
                     extraordinarily diverse range of successful products with
                     universal appeal. His simple and intuitive designs are
@@ -236,7 +245,10 @@ const About = () => {
               </Grid>
               <Grid md={4} item>
                 <Paper className={classes.biography_paper}>
-                  <Typography align="justify">
+                  <Typography
+                    align="justify"
+                    style={{ fontFamily: "Century", fontSize: "14px" }}
+                  >
                     After taking positions at Apple, IDEO and Porsche,
                     Meyerhoffer founded his integrated design studio in Montara,
                     California, in 1999.
@@ -245,7 +257,10 @@ const About = () => {
               </Grid>
               <Grid md={4} item>
                 <Paper className={classes.biography_paper}>
-                  <Typography align="justify">
+                  <Typography
+                    align="justify"
+                    style={{ fontFamily: "Century", fontSize: "14px" }}
+                  >
                     Meyerhoffer is the recipient of multiple international
                     design awards and patents. His work has been featured in The
                     New York Times, Outside Magazine and in Museums such as The
