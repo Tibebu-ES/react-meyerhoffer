@@ -257,7 +257,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("colette")}
             >
               Colette Paris
             </Button>
@@ -275,7 +275,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("startup")}
             >
               Start Up design and brand strategy
             </Button>
@@ -284,7 +284,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("baldface")}
             >
               Bald Face home made snowboard
             </Button>

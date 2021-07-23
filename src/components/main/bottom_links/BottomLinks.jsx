@@ -5,6 +5,7 @@ import LinkCoca from "./LinkCoca";
 import { makeStyles } from "@material-ui/core/styles";
 import LinkHundred from "./LinkHundred";
 import LinkApple from "./LinkApple";
+import LinkBaldFace from "./LinkBaldFace";
 
 const useStyles = makeStyles(() => ({
   wrapper: {
@@ -17,16 +18,18 @@ const BottomLinks = ({ choose }) => {
   const classes = useStyles();
   return (
     <div className={classes.wrapper}>
-      {choose === "latch" ? (
+      {choose === "latch" || choose === "startup" ? (
         <LinkLatch />
       ) : choose === "bloomberg" ? (
         <LinkBloomberg />
-      ) : choose === "coca" ? (
+      ) : choose === "coca" || choose === "colette" ? (
         <LinkCoca />
       ) : choose === "hundred" ? (
         <LinkHundred />
       ) : choose === "apple" ? (
         <LinkApple />
+      ) : choose === "baldface" ? (
+        <LinkBaldFace />
       ) : (
         ""
       )}
