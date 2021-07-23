@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import LinkHundred from "./LinkHundred";
 import LinkApple from "./LinkApple";
 import LinkBaldFace from "./LinkBaldFace";
+import LinkSoftComputer from "./LinkSoftComputer";
 
 const useStyles = makeStyles(() => ({
   wrapper: {
@@ -30,6 +31,8 @@ const BottomLinks = ({ choose }) => {
         <LinkApple />
       ) : choose === "baldface" ? (
         <LinkBaldFace />
+      ) : choose === "softcomputer" ? (
+        <LinkSoftComputer />
       ) : (
         ""
       )}

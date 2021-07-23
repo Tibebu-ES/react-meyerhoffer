@@ -79,6 +79,12 @@ import c31 from "../../assets/hb_link17/bbald_1.jpg";
 import c32 from "../../assets/hb_link17/bbald_2.jpg";
 import c33 from "../../assets/hb_link17/bbald_3.jpg";
 import c34 from "../../assets/hb_link17/bbald_4.jpg";
+import c35 from "../../assets/hb_link18/bsoft_0.jpg";
+import c36 from "../../assets/hb_link18/bsoft_01.jpg";
+import c37 from "../../assets/hb_link18/bsoft_1.jpg";
+import c38 from "../../assets/hb_link18/bsoft_2.jpg";
+import c39 from "../../assets/hb_link18/bsoft_2.1.jpg";
+import c40 from "../../assets/hb_link18/bsoft_3.jpg";
 
 // about component
 import a1 from "../../assets/a1.gif";
@@ -159,6 +165,12 @@ const home_files = [
   c32,
   c33,
   c34,
+  c35,
+  c36,
+  c37,
+  c38,
+  c39,
+  c40,
 ];
 
 const object_files = [

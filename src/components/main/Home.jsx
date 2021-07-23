@@ -293,7 +293,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("softcomputer")}
             >
               Soft Computer
             </Button>
