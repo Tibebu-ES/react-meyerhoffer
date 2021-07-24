@@ -85,6 +85,29 @@ import c37 from "../../assets/hb_link18/bsoft_1.jpg";
 import c38 from "../../assets/hb_link18/bsoft_2.jpg";
 import c39 from "../../assets/hb_link18/bsoft_2.1.jpg";
 import c40 from "../../assets/hb_link18/bsoft_3.jpg";
+import c41 from "../../assets/hb_link3457/pic_1.mp4";
+import c42 from "../../assets/hb_link3457/pic_2.jpg";
+import c43 from "../../assets/hb_link3457/pic_3.jpg";
+import c44 from "../../assets/hb_link3457/pic_5.mp4";
+import c45 from "../../assets/hb_link3457/pic_14.jpg";
+import c46 from "../../assets/hb_link3457/pic_15.jpg";
+import c47 from "../../assets/hb_link3457/pic_16.jpg";
+import c48 from "../../assets/hb_link3457/pic_17.jpg";
+import c49 from "../../assets/hb_link3457/pic_18.jpg";
+import c50 from "../../assets/hb_link3457/pic_19.jpg";
+import c51 from "../../assets/hb_link3457/pic_20.jpg";
+import c52 from "../../assets/hb_link3457/pic_21.jpg";
+import c53 from "../../assets/hb_link3457/pic_22.jpg";
+import c54 from "../../assets/hb_link3457/pic_23.jpg";
+import c55 from "../../assets/hb_link3457/pic_24.jpg";
+import c56 from "../../assets/hb_link3457/pic_13.jpg";
+import c57 from "../../assets/hb_link3457/pic_12.jpg";
+import c58 from "../../assets/hb_link3457/pic_5.mp4";
+import c59 from "../../assets/hb_link3457/pic_7.jpg";
+import c60 from "../../assets/hb_link3457/pic_8.jpg";
+import c61 from "../../assets/hb_link3457/pic_9.jpg";
+import c62 from "../../assets/hb_link3457/pic_10.jpg";
+import c63 from "../../assets/hb_link3457/pic_11.jpg";
 
 // about component
 import a1 from "../../assets/a1.gif";
@@ -171,6 +194,29 @@ const home_files = [
   c38,
   c39,
   c40,
+  c41,
+  c42,
+  c43,
+  c44,
+  c45,
+  c46,
+  c47,
+  c48,
+  c49,
+  c50,
+  c51,
+  c52,
+  c53,
+  c54,
+  c55,
+  c56,
+  c57,
+  c58,
+  c59,
+  c60,
+  c61,
+  c62,
+  c63,
 ];
 
 const object_files = [

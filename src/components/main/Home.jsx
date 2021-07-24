@@ -158,7 +158,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("psd")}
             >
               Design Patents
             </Button>
@@ -167,7 +167,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("psd")}
             >
               A life as a surfer
             </Button>
@@ -176,7 +176,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("psd")}
             >
               Surfboard designer
             </Button>
@@ -266,7 +266,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("psd")}
             >
               Slip In single fin
             </Button>
