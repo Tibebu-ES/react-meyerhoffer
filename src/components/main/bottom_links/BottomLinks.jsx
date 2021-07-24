@@ -10,6 +10,7 @@ import LinkSoftComputer from "./LinkSoftComputer";
 import LinkPSD from "./LinkPSD";
 import LinkSkigoggole from "./LinkSkigoggle";
 import LinkPorsche from "./LinkPorsche";
+import LinkSnowboard from "./LinkSnowboard";
 
 const useStyles = makeStyles(() => ({
   wrapper: {
@@ -42,6 +43,8 @@ const BottomLinks = ({ choose }) => {
         <LinkSkigoggole />
       ) : choose === "porsche" ? (
         <LinkPorsche />
+      ) : choose === "snow" ? (
+        <LinkSnowboard />
       ) : (
         ""
       )}

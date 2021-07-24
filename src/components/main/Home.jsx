@@ -320,7 +320,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("snow")}
             >
               Up-cycled Snowboard
             </Button>
