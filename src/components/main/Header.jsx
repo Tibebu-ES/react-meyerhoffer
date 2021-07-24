@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import ReactPlayer from "react-player";
 import { makeStyles } from "@material-ui/core/styles";
-import sign_video from "../../assets/SIGNATURE.mp4";
+import sign_video from "../../assets/SIGNATURE.gif";
 
 const useStyles = makeStyles((theme) => ({
   header_root: {
@@ -26,13 +26,7 @@ const Header = () => {
   return (
     <Grid container className={classes.header_root}>
       <Grid item xs={12} md={3} className={classes.header_child_player}>
-        <ReactPlayer
-          playing={true}
-          loop={true}
-          url={sign_video}
-          width="100%"
-          height="100%"
-        />
+        <img src={sign_video} width="100%" height="100%"></img>
       </Grid>
       <Grid xs={12} item md={8} className={classes.header_child_typo}>
         <Typography
