@@ -131,6 +131,26 @@ import a8 from "../../assets/pdf/annual.pdf";
 import a9 from "../../assets/pdf/domus.pdf";
 import a10 from "../../assets/pdf/casedeabitare.pdf";
 
+//shop component
+
+import s1 from "../../assets/shop/sh_1.mp4";
+import s2 from "../../assets/shop/sh_2.jpg";
+import s3 from "../../assets/shop/sh_3.jpg";
+import s4 from "../../assets/shop/sh_4.jpg";
+import s4_1 from "../../assets/shop/sh_4.1.jpg";
+import s5 from "../../assets/shop/sh_5.jpg";
+import s6 from "../../assets/shop/sh_6.jpg";
+import s7 from "../../assets/shop/sh_7.jpg";
+import s8 from "../../assets/shop/sh_8.jpg";
+import s9 from "../../assets/shop/sh_9.jpg";
+import s10 from "../../assets/shop/sh_10.mp4";
+import s11 from "../../assets/shop/sh_11.jpg";
+import s12 from "../../assets/shop/sh_12.jpg";
+import s13 from "../../assets/shop/sh_13.jpg";
+import s14 from "../../assets/shop/sh_14.jpg";
+import s15 from "../../assets/shop/sh_15.jpg";
+import s16 from "../../assets/shop/sh_16.jpg";
+
 const about_files = [a1, a2, a5, a6, a7, , a8, a9, a10];
 
 const home_files = [
@@ -441,4 +461,24 @@ const object_files = [
   },
 ];
 
-export { object_files, home_files, about_files };
+const shop_files = [
+  { asset: s1, caption: "Full Circle NF", price: "$ 3600.00" },
+  { asset: s2, caption: "FULL CIRCLE 2021. 9.1", price: "$ 2200.00" },
+  { asset: s3, caption: "FULL CIRCLE 2021. 7.2", price: "$ 2000.00" },
+  { asset: s4, caption: "FULL CIRCLE (EDGE) 2021. 6.10", price: "$ 2200.00" },
+  { asset: s4_1, caption: "FULL CIRCLE 2021. 7.6", price: "$ 2200.00" },
+  { asset: s5, caption: "FULL CIRCLE 2021. 7.6", price: "$ 2200.00" },
+  { asset: s6, caption: "SLIP IN. 2021. 6.6", price: "$ 1600.00" },
+  { asset: s7, caption: "Flex Fin by Futures 8.5", price: "$ 2400.00" },
+  { asset: s8, caption: "Flex Fin by Futures 8.5", price: "Sold out" },
+  { asset: s9, caption: "Original", price: "$ 1800.00" },
+  { asset: s10, caption: "Slip In", price: "Free Surfing" },
+  { asset: s11, caption: "Surf Magazine", price: "$ 15.00" },
+  { asset: s12, caption: "WHITE A** 2012. 6.6", price: "$ 1800.00" },
+  { asset: s13, caption: "DROP DEAD 2018. 7.0 CARBON", price: "$ 2400.00" },
+  { asset: s14, caption: "LEGO ZOO 2018 9.2", price: "$ 2600.00" },
+  { asset: s15, caption: "Flex Box", price: "$ 25.00" },
+  { asset: s16, caption: "Surf Magazine", price: "$ 12.00" },
+];
+
+export { object_files, home_files, about_files, shop_files };
