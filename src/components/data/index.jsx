@@ -108,6 +108,9 @@ import c60 from "../../assets/hb_link3457/pic_8.jpg";
 import c61 from "../../assets/hb_link3457/pic_9.jpg";
 import c62 from "../../assets/hb_link3457/pic_10.jpg";
 import c63 from "../../assets/hb_link3457/pic_11.jpg";
+import c64 from "../../assets/hb_link14/bski_1.jpg";
+import c65 from "../../assets/hb_link14/bski_2.jpg";
+import c66 from "../../assets/hb_link14/bski_3.jpg";
 
 // about component
 import a1 from "../../assets/a1.gif";
@@ -217,6 +220,9 @@ const home_files = [
   c61,
   c62,
   c63,
+  c64,
+  c65,
+  c66,
 ];
 
 const object_files = [

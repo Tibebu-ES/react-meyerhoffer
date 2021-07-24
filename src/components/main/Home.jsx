@@ -302,7 +302,7 @@ const Home = () => {
             <Button
               variant="outlined"
               color="primary"
-              onClick={() => handleDrawerOpen()}
+              onClick={() => handleDrawerOpen("skigoggle")}
             >
               First modern ski goggle
             </Button>
