@@ -7,7 +7,6 @@ import {
   CardContent,
   Card,
   Box,
-  Chip,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";

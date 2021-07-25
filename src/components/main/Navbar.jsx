@@ -19,8 +19,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Century",
     color: "#fffefe",
     textDecoration: "none",
-    color: "#fffefe",
-    textDecoration: "none",
   },
   modal: {
     display: "block",

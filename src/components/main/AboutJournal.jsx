@@ -1,8 +1,7 @@
 import React from "react";
 import { Typography, Grid, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import ab1 from "../../assets/ab1.jpg";
-import ab2 from "../../assets/ab2.jpg";
+import { about_files } from "../data/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +45,7 @@ const AboutJournal = () => {
           <Grid item md={6}>
             <Paper style={{ padding: "10px" }}>
               <img
-                src={ab1}
+                src={about_files[8]}
                 style={{ width: "50%", height: "240px" }}
                 alt="thomasmeyerhoffer.com"
               />
@@ -55,7 +54,7 @@ const AboutJournal = () => {
           <Grid item md={6}>
             <Paper style={{ padding: "10px" }}>
               <img
-                src={ab2}
+                src={about_files[9]}
                 style={{ width: "70%" }}
                 alt="thomasmeyerhoffer.com"
               />

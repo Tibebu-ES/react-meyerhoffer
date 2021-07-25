@@ -1,55 +1,55 @@
 // object component
-import h1 from "../../assets/1.jpg";
-import h2 from "../../assets/2.jpg";
-import h3 from "../../assets/3.jpg";
-import h4 from "../../assets/4.jpg";
-import h5 from "../../assets/5.mp4";
-import h6 from "../../assets/6.jpg";
-import h7 from "../../assets/7.jpg";
-import h8 from "../../assets/8.jpg";
-import h9 from "../../assets/9.mp4";
-import h10 from "../../assets/10.jpg";
-import h11 from "../../assets/11.jpg";
-import h12 from "../../assets/12.jpg";
-import h13 from "../../assets/13.jpg";
-import h14 from "../../assets/14.jpg";
-import h15 from "../../assets/15.jpg";
-import h16 from "../../assets/16.jpg";
-import h17 from "../../assets/17.jpg";
-import h18 from "../../assets/18.jpg";
-import h19 from "../../assets/19.jpg";
-import h20 from "../../assets/20.jpg";
-import h21 from "../../assets/21.jpg";
-import h22 from "../../assets/22.jpg";
-import h23 from "../../assets/23.jpg";
-import h24 from "../../assets/24.jpg";
-import h25 from "../../assets/25.jpg";
-import h26 from "../../assets/26.jpg";
-import h27 from "../../assets/27.mp4";
-import h28 from "../../assets/28.jpg";
-import h29 from "../../assets/29.jpg";
-import h30 from "../../assets/30.jpg";
-import h31 from "../../assets/31.jpg";
-import h32 from "../../assets/32.jpg";
-import h33 from "../../assets/33.jpg";
-import h34 from "../../assets/34.jpg";
-import h35 from "../../assets/35.jpg";
-import h36 from "../../assets/36.jpg";
-import h37 from "../../assets/37.jpg";
-import h38 from "../../assets/38.jpg";
-import h39 from "../../assets/39.jpg";
+import h1 from "../../assets/images/1.jpg";
+import h2 from "../../assets/images/2.jpg";
+import h3 from "../../assets/images/3.jpg";
+import h4 from "../../assets/images/4.jpg";
+import h5 from "../../assets/videos/5.mp4";
+import h6 from "../../assets/images/6.jpg";
+import h7 from "../../assets/images/7.jpg";
+import h8 from "../../assets/images/8.jpg";
+import h9 from "../../assets/videos/9.mp4";
+import h10 from "../../assets/images/10.jpg";
+import h11 from "../../assets/images/11.jpg";
+import h12 from "../../assets/images/12.jpg";
+import h13 from "../../assets/images/13.jpg";
+import h14 from "../../assets/images/14.jpg";
+import h15 from "../../assets/images/15.jpg";
+import h16 from "../../assets/images/16.jpg";
+import h17 from "../../assets/images/17.jpg";
+import h18 from "../../assets/images/18.jpg";
+import h19 from "../../assets/images/19.jpg";
+import h20 from "../../assets/images/20.jpg";
+import h21 from "../../assets/images/21.jpg";
+import h22 from "../../assets/images/22.jpg";
+import h23 from "../../assets/images/23.jpg";
+import h24 from "../../assets/images/24.jpg";
+import h25 from "../../assets/images/25.jpg";
+import h26 from "../../assets/images/26.jpg";
+import h27 from "../../assets/videos/27.mp4";
+import h28 from "../../assets/images/28.jpg";
+import h29 from "../../assets/images/29.jpg";
+import h30 from "../../assets/images/30.jpg";
+import h31 from "../../assets/images/31.jpg";
+import h32 from "../../assets/images/32.jpg";
+import h33 from "../../assets/images/33.jpg";
+import h34 from "../../assets/images/34.jpg";
+import h35 from "../../assets/images/35.jpg";
+import h36 from "../../assets/images/36.jpg";
+import h37 from "../../assets/images/37.jpg";
+import h38 from "../../assets/images/38.jpg";
+import h39 from "../../assets/images/39.jpg";
 
 // home component
-import c00 from "../../assets/h2.mp4";
-import c01 from "../../assets/h3.jpg";
-import c02 from "../../assets/h4.mp4";
-import c03 from "../../assets/h5.mp4";
-import c04 from "../../assets/h6.mp4";
-import c1 from "../../assets/c1.jpg";
-import c2 from "../../assets/c2.jpg";
-import c3 from "../../assets/c3.jpg";
-import c4 from "../../assets/c4.jpg";
-import c5 from "../../assets/c5.jpg";
+import c00 from "../../assets/videos/h2.mp4";
+import c01 from "../../assets/images/h3.jpg";
+import c02 from "../../assets/videos/h4.mp4";
+import c03 from "../../assets/videos/h5.mp4";
+import c04 from "../../assets/videos/h6.mp4";
+import c1 from "../../assets/images/c1.jpg";
+import c2 from "../../assets/images/c2.jpg";
+import c3 from "../../assets/images/c3.jpg";
+import c4 from "../../assets/images/c4.jpg";
+import c5 from "../../assets/images/c5.jpg";
 import c6 from "../../assets/hb_link1/blatch1.jpg";
 import c7 from "../../assets/hb_link1/blatch2.jpg";
 import c8 from "../../assets/hb_link1/blatch3.jpg";
@@ -122,14 +122,17 @@ import c74 from "../../assets/hb_link16/bsnow_3.jpg";
 import c75 from "../../assets/hb_link16/bsnow_4.jpg";
 
 // about component
-import a1 from "../../assets/a1.gif";
-import a2 from "../../assets/a2.mp4";
-import a5 from "../../assets/a5.jpg";
-import a6 from "../../assets/a6.jpg";
-import a7 from "../../assets/a7.mp4";
+import a1 from "../../assets/images/a1.gif";
+import a2 from "../../assets/videos/a2.mp4";
+import a5 from "../../assets/images/a5.jpg";
+import a6 from "../../assets/images/a6.jpg";
+import a7 from "../../assets/videos/a7.mp4";
 import a8 from "../../assets/pdf/annual.pdf";
 import a9 from "../../assets/pdf/domus.pdf";
 import a10 from "../../assets/pdf/casedeabitare.pdf";
+import ab1 from "../../assets/images/ab1.jpg";
+import ab2 from "../../assets/images/ab2.jpg";
+import ab3 from "../../assets/images/ab3.jpg";
 
 //shop component
 
@@ -151,7 +154,7 @@ import s14 from "../../assets/shop/sh_14.jpg";
 import s15 from "../../assets/shop/sh_15.jpg";
 import s16 from "../../assets/shop/sh_16.jpg";
 
-const about_files = [a1, a2, a5, a6, a7, , a8, a9, a10];
+const about_files = [a1, a2, a5, a6, a7, a8, a9, a10, ab1, ab2, ab3];
 
 const home_files = [
   c00,

@@ -22,6 +22,7 @@ const LinkCoca = () => {
               <img
                 srcSet={`${item}?w=161&fit=crop&auto=format 1x, ${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
                 loading="lazy"
+                alt=" "
               />
             </ImageListItem>
           ))}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Grid, Paper, Chip } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import ab3 from "../../assets/ab3.jpg";
+import { about_files } from "../data/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,7 +45,7 @@ const AboutMagazine = () => {
           <Grid item md={4}>
             <Paper style={{ padding: "10px" }}>
               <img
-                src={ab3}
+                src={about_files[10]}
                 style={{ width: "100%", height: "370px" }}
                 alt="thomasmeyerhoffer.com"
               />

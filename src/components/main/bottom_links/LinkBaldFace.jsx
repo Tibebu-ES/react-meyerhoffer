@@ -1,12 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import {
-  Grid,
-  Typography,
-  ImageListItem,
-  ImageList,
-  Chip,
-} from "@material-ui/core";
+import { Grid, Typography, Chip } from "@material-ui/core";
 import { home_files } from "../../data";
 
 const useStyles = makeStyles(() => ({
@@ -16,7 +10,6 @@ const useStyles = makeStyles(() => ({
 }));
 
 const LinkBaldFace = () => {
-  const itemData = home_files.slice(22, 25);
   const classes = useStyles();
 
   return (
