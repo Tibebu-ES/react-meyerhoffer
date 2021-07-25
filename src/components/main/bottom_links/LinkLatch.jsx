@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { home_files, object_files } from "../../data/index";
-import { CloudDownload, StarBorder } from "@material-ui/icons";
+import { StarBorder } from "@material-ui/icons";
 import LinkLatchModal from "./LinkLatchModal";
 
 const useStyles = makeStyles((theme) => ({

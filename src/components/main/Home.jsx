@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   Grid,
-  Badge,
   Typography,
   Drawer,
   IconButton,

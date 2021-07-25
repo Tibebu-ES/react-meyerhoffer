@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <Grid container className={classes.header_root}>
       <Grid item xs={12} md={3} className={classes.header_child_player}>
-        <img src={sign_video} width="100%" height="100%"></img>
+        <img src={sign_video} width="100%" height="100%" alt="Logo"></img>
       </Grid>
       <Grid xs={12} item md={8} className={classes.header_child_typo}>
         <Typography

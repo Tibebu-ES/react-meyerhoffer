@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, makeStyles, Typography, Chip } from "@material-ui/core";
+import { Grid, makeStyles, Typography } from "@material-ui/core";
 import ReactPlayer from "react-player";
 import { home_files } from "../../data/index";
 

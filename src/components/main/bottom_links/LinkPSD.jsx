@@ -105,7 +105,7 @@ const LinkPSD = () => {
       </Grid>
       <Grid item xs={12}>
         <img src={home_files[63]} width="100%" alt="meyerhoffer.com" />
-        <Typography paragraph className={classes.content_font} paragraph>
+        <Typography className={classes.content_font} paragraph>
           Early Slip In protoype, this board won Best In Show at The Boardroom
           Show
         </Typography>
@@ -118,7 +118,7 @@ const LinkPSD = () => {
           width="100%"
           height="100%"
         />
-        <Typography paragraph className={classes.content_font} paragraph>
+        <Typography className={classes.content_font} paragraph>
           Josh Mulcoy on the Slip In somehwere in Mexcio.
         </Typography>
       </Grid>
@@ -207,12 +207,7 @@ const LinkPSD = () => {
       <Grid item xs={12}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
-            <Typography
-              variant="h4"
-              paragraph
-              className={classes.title_font}
-              paragraph
-            >
+            <Typography variant="h4" paragraph className={classes.title_font}>
               THE JOURNEY AND THE PEOPLE.
             </Typography>
           </Grid>
