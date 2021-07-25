@@ -21,7 +21,7 @@ import { ExpandMore, NavigateNext, CloudDownload } from "@material-ui/icons";
 import ReactPlayer from "react-player";
 import { about_files } from "../data/index";
 import ReactAudioPlayer from "react-audio-player";
-import audio from "../../assets/dialog.ogg";
+import audio from "../../assets/audios/dialog.ogg";
 import LinkDetails from "./LinkDetails";
 
 const useStyles = makeStyles((theme) => ({

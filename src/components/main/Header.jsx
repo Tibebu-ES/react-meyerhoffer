@@ -1,8 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-import ReactPlayer from "react-player";
 import { makeStyles } from "@material-ui/core/styles";
-import sign_video from "../../assets/SIGNATURE.gif";
+import sign_video from "../../assets/videos/SIGNATURE.gif";
 
 const useStyles = makeStyles((theme) => ({
   header_root: {
