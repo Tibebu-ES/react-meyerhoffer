@@ -71,7 +71,7 @@ const Navbar = (props) => {
                   exact
                   to="/about"
                   className={classes.nav_link}
-                  activeStyle={{ color: "aqua" }}
+                  activeStyle={{ fontWeight: "bold" }}
                 >
                   ABOUT
                 </NavLink>
@@ -83,7 +83,7 @@ const Navbar = (props) => {
                   exact
                   to="/archive"
                   className={classes.nav_link}
-                  activeStyle={{ color: "aqua" }}
+                  activeStyle={{ fontWeight: "bold" }}
                 >
                   OBJECTS
                 </NavLink>
