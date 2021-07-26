@@ -8,8 +8,15 @@ import {
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  alignItemsAndJustifyContent: {
+  app_bar: {
+    position: "static",
+    backgroundColor: "#000000",
+    color: "#FFFFFF",
+    marginTop: "10rem",
+  },
+  toolbar: {
     justifyContent: "flex-end",
+    minHeight: 128,
   },
   toolbarItem: {
     marginRight: "1rem",
@@ -23,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <AppBar position="static" color="primary">
-      <Toolbar className={classes.alignItemsAndJustifyContent}>
+    <AppBar className={classes.app_bar}>
+      <Toolbar className={classes.toolbar}>
         <Typography
           className={classes.toolbarItem}
           variant="body2"
