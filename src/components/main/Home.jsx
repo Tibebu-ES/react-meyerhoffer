@@ -24,6 +24,12 @@ const useStyles = makeStyles((theme) => ({
   navIcon: {
     color: "#fff",
   },
+  bottomLinkButText: {
+    fontSize: "12px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "10px",
+    },
+  },
 }));
 
 const Home = () => {
@@ -129,217 +135,272 @@ const Home = () => {
         </Box>
 
         {/*bootom links */}
-        <Grid
-          container
-          direction="row"
-          spacing={2}
-          style={{ marginBottom: "20px" }}
-        >
+        <Grid container spacing={1} direction="row">
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("latch")}
             >
-              Latch start up going public @ 1.6B
+              <span className={classes.bottomLinkButText}>
+                {" "}
+                Latch start up going public @ 1.6B
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("bloomberg")}
             >
-              Mike Bloomberg Presidential Stragety
+              <span className={classes.bottomLinkButText}>
+                Mike Bloomberg Presidential Stragety
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("psd")}
             >
-              Design Patents
+              <span className={classes.bottomLinkButText}>Design Patents</span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
               color="primary"
+              size="small"
               onClick={() => handleDrawerOpen("psd")}
             >
-              A life as a surfer
+              <span className={classes.bottomLinkButText}>
+                A life as a surfer
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
               color="primary"
+              size="small"
               onClick={() => handleDrawerOpen("psd")}
             >
-              Surfboard designer
+              <span className={classes.bottomLinkButText}>
+                Surfboard designer
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
               color="primary"
+              size="small"
               onClick={() => handleDrawerOpen("coca")}
             >
-              Coca-Cola Glass
+              <span className={classes.bottomLinkButText}>Coca-Cola Glass</span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("hundred")}
             >
-              100 Million users every day
+              <span className={classes.bottomLinkButText}>
+                100 Million users every day
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Cappellini chair
+              <span className={classes.bottomLinkButText}>
+                Cappellini chair
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Outside Magazine cover story
+              <span className={classes.bottomLinkButText}>
+                Outside Magazine cover story
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Occasional race car dirver
+              <span className={classes.bottomLinkButText}>
+                Occasional race car dirver
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Thomas talks with Tom Sachs
+              <span className={classes.bottomLinkButText}>
+                Thomas talks with Tom Sachs
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Multiple International design awards
+              <span className={classes.bottomLinkButText}>
+                Multiple International design awards
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
               color="primary"
+              size="small"
               onClick={() => handleDrawerOpen("apple")}
             >
-              Apple design group
+              <span className={classes.bottomLinkButText}>
+                Apple design group
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("colette")}
             >
-              Colette Paris
+              <span className={classes.bottomLinkButText}>Colette Paris</span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("psd")}
             >
-              Slip In single fin
+              <span className={classes.bottomLinkButText}>
+                Slip In single fin
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("startup")}
             >
-              Start Up design and brand strategy
+              <span className={classes.bottomLinkButText}>
+                Start Up design and brand strategy
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("baldface")}
             >
-              Bald Face home made snowboard
+              <span className={classes.bottomLinkButText}>
+                Bald Face home made snowboard
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("softcomputer")}
             >
-              Soft Computer
+              <span className={classes.bottomLinkButText}>Soft Computer</span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("skigoggle")}
             >
-              First modern ski goggle
+              <span className={classes.bottomLinkButText}>
+                First modern ski goggle
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("porsche")}
             >
-              Porsche Design Intern
+              <span className={classes.bottomLinkButText}>
+                Porsche Design Intern
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen("snow")}
             >
-              Up-cycled Snowboard
+              <span className={classes.bottomLinkButText}>
+                Up-cycled Snowboard
+              </span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Medical design
+              <span className={classes.bottomLinkButText}>Medical design</span>
             </Button>
           </Grid>
           <Grid item>
             <Button
               variant="outlined"
+              size="small"
               color="primary"
               onClick={() => handleDrawerOpen()}
             >
-              Surfer surfing the boards all over the world
+              <span className={classes.bottomLinkButText}>
+                Surfer surfing the boards all over the world
+              </span>
             </Button>
           </Grid>
         </Grid>
