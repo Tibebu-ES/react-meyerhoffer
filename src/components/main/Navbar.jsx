@@ -15,9 +15,15 @@ import { ShoppingCart } from "@material-ui/icons";
 import Shop from "./Shop";
 
 const useStyles = makeStyles((theme) => ({
+  app_bar: {
+    position: "sticky",
+    boxShadow: "none",
+    backgroundColor: "#fcfcff",
+  },
+
   nav_link: {
     fontFamily: "Century",
-    color: "#fffefe",
+    color: "#000000",
     textDecoration: "none",
   },
   modal: {
@@ -44,7 +50,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar className={classes.app_bar}>
         <Toolbar variant="dense">
           <Grid container spacing={3} alignItems="center" justify="center">
             <Grid item>
@@ -53,7 +59,7 @@ const Navbar = (props) => {
                   exact
                   to="/"
                   className={classes.nav_link}
-                  activeStyle={{ color: "aqua" }}
+                  activeStyle={{ fontWeight: "bold" }}
                 >
                   HOME
                 </NavLink>
@@ -84,11 +90,7 @@ const Navbar = (props) => {
               </Typography>
             </Grid>
           </Grid>
-          <IconButton
-            aria-label="surfer shop"
-            color="inherit"
-            onClick={handleOpenModal}
-          >
+          <IconButton aria-label="surfer shop" onClick={handleOpenModal}>
             <ShoppingCart />
           </IconButton>
         </Toolbar>
