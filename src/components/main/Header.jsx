@@ -4,19 +4,26 @@ import { makeStyles } from "@material-ui/core/styles";
 import sign_video from "../../assets/videos/SIGNATURE.gif";
 
 const useStyles = makeStyles((theme) => ({
-  header_root: {
-    paddingTop: "20px",
-    paddingBottom: "20px",
-  },
+  header_root: {},
   header_child_player: {
     padding: "10px",
+    [theme.breakpoints.down("sm")]: {
+      order: 2,
+    },
   },
   header_child_typo: {
-    paddingTop: "10px",
+    padding: "10px",
+    [theme.breakpoints.down("sm")]: {
+      order: 1,
+    },
   },
   header_child_typo_parag: {
     fontSize: "14px",
     fontFamily: "Century",
+    textAlign: "justify",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12px",
+    },
   },
 }));
 
@@ -24,15 +31,11 @@ const Header = () => {
   const classes = useStyles();
   return (
     <Grid container className={classes.header_root}>
-      <Grid item xs={12} md={3} className={classes.header_child_player}>
-        <img src={sign_video} width="100%" height="100%" alt="Logo"></img>
+      <Grid item xs={12} md={4} className={classes.header_child_player}>
+        <img src={sign_video} width="100%" alt="Logo"></img>
       </Grid>
-      <Grid xs={12} item md={8} className={classes.header_child_typo}>
-        <Typography
-          variant="body1"
-          align="justify"
-          className={classes.header_child_typo_parag}
-        >
+      <Grid item xs={12} md={8} className={classes.header_child_typo}>
+        <Typography className={classes.header_child_typo_parag}>
           Born in Sweden in 1965, Thomas Meyerhoffer is a creator and visionary.
           After earning a degree in Industrial Design from Art Center, he
           started his journey with an internship at Porsche, only to Go West to
