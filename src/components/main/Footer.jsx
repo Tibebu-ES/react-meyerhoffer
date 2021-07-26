@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     position: "static",
     backgroundColor: "#000000",
     color: "#FFFFFF",
+    marginTop: "10rem",
   },
   toolbar: {
     justifyContent: "flex-end",
