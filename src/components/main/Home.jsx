@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Paper, Container, Grid, Typography } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import { home_files } from "../data/index";
@@ -53,8 +53,6 @@ const Home = () => {
   let items = home_files.slice(5, 10);
 
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
-  const [choose, setChoose] = useState(false);
 
   function Item(props) {
     return (
@@ -68,16 +66,6 @@ const Home = () => {
       </Paper>
     );
   }
-
-  const handleDrawerOpen = (choose) => {
-    setChoose(choose);
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-    setChoose("");
-  };
 
   return (
     <Container className={classes.root}>
