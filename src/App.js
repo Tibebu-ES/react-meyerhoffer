@@ -6,6 +6,7 @@ import {
   Navbar,
   Footer,
   LinkLatch,
+  LinkBloomberg,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/archive" component={Objects} />
         <Route exact path="/archive-latch" component={LinkLatch} />
+        <Route exact path="/archive-bloomberg" component={LinkBloomberg} />
       </Switch>
       <Footer />
     </div>
