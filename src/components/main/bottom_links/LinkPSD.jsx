@@ -1,214 +1,284 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { Grid, Typography, Divider } from "@material-ui/core";
-import ReactPlayer from "react-player/lazy";
+import { Grid, Typography } from "@material-ui/core";
+import ReactPlayer from "react-player";
 import { home_files } from "../../data/index";
+import Shop from "../Shop";
 
-const useStyle = makeStyles(() => ({
+const useStyle = makeStyles((theme) => ({
   root: {
-    padding: "20px",
+    padding: "10vw 6.25vw  0 6.25vw;",
   },
   content_font: {
     fontFamily: "Century",
+    fontSize: "13px",
+    color: "#000000",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "11px",
+    },
   },
   title_font: {
     fontFamily: "GenathDisplay",
     fontWeight: "bold",
+    fontSize: "56px",
   },
   content_font_sboard: {
     fontFamily: "Centruy",
     fontStyle: "italic",
   },
+  hr_line: {
+    color: "#000",
+    backgroundColor: "#000",
+    height: "1px",
+    marginTop: "50px",
+    marginBottom: "50px",
+  },
+  img: { width: "100%", height: "auto" },
 }));
 
 const LinkPSD = () => {
   const classes = useStyle();
 
   return (
-    <Grid
-      container
-      direction="column"
-      className={classes.root}
-      spacing={2}
-      alignItems="center"
-    >
-      <Grid item xs={12}>
-        <Typography align="justify" paragraph className={classes.content_font}>
-          "My latest model is Full Circle. It took me a long time to get to this
-          point. That is how it got its name. I could consider myself done after
-          this. Most likely not. Ha! This model is already morphing into a twin
-          fin. Which i like a lot. Full Circle is based on the original design
-          that was introduced 15 years ago now. The original concept remains. A
-          narrow waist, with its iconic side cut. The tail has the widest point
-          way back and a deep double spiral vee for speed. The concept work
-          across a wide range. I like the mid lengths the most."
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Grid container justifyContent="space-evenly" alignItems="center">
-          <Grid item xs={12} md={5}>
-            <ReactPlayer
-              playing={true}
-              loop={true}
-              url={home_files[45]}
-              width="100%"
-            />
-          </Grid>
-          <Grid item xs={12} md={5}>
-            <img src={home_files[46]} width="100%" alt="meyerhoffer.com" />
-            <Typography className={classes.content_font}>
-              FULL CIRCLE 2021
-            </Typography>
+    <Grid container direction="column" spacing={1} className={classes.root}>
+      {/* section 1 */}
+      <Grid container direction="column" spacing={6}>
+        <Grid item xs={12} md={9}>
+          <Typography
+            paragraph
+            align="justify"
+            className={classes.content_font}
+          >
+            "My latest model is Full Circle. It took me a long time to get to
+            this point. That is how it got its name. I could consider myself
+            done after this. Most likely not. Ha! This model is already morphing
+            into a twin fin. Which i like a lot. Full Circle is based on the
+            original design that was introduced 15 years ago now. The original
+            concept remains. A narrow waist, with its iconic side cut. The tail
+            has the widest point way back and a deep double spiral vee for
+            speed. The concept work across a wide range. I like the mid lengths
+            the most."
+          </Typography>
+        </Grid>
+
+        <Grid xs={12} container item style={{ marginBottom: "80px" }}>
+          <Grid item xs={12} md={9}>
+            <img src={home_files[45]} width="100%" alt="meyerhoffer.com" />
           </Grid>
         </Grid>
-      </Grid>
-      <Grid item xs={12}>
-        <Grid container justifyContent="space-evenly" alignItems="center">
-          <Grid item xs={12} md={5} justifyContent="center">
-            <img src={home_files[47]} width="100%" alt="meyerhoffer.com" />
+
+        <Grid
+          container
+          item
+          justifyContent="center"
+          alignItems="center"
+          xs={12}
+          md={9}
+        >
+          <Grid item xs={8} md={8}>
+            <img src={home_files[46]} width="100%" alt="meyerhoffer.com" />
           </Grid>
-          <Grid item xs={12} md={5}>
+        </Grid>
+
+        <Grid item>
+          <Typography className={classes.content_font}>
+            FULL CIRCLE 2021
+          </Typography>
+        </Grid>
+
+        <Grid item xs={6} md={6}>
+          <img src={home_files[47]} width="100%" alt="meyerhoffer.com" />
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <ReactPlayer
+            controls={true}
+            url={home_files[80]}
+            width="100%"
+            height="100%"
+          />
+          <Typography className={classes.content_font} paragraph>
+            Thomas surfing his home made board at a home made wave. The Surf
+            Ranch & Full Circle.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={8}>
+          <ReactPlayer
+            playing={true}
+            loop={true}
+            url={home_files[85]}
+            width="100%"
+            height="100%"
+          />
+        </Grid>
+
+        <Grid
+          container
+          item
+          justifyContent="center"
+          alignItems="center"
+          xs={12}
+          md={9}
+        >
+          <Grid item xs={8} md={8}>
             <ReactPlayer
-              playing={true}
-              loop={true}
+              controls={true}
               url={home_files[48]}
               width="100%"
               height="100%"
             />
-            <Typography className={classes.content_font}>
-              Thomas surfing his home made board at a home made wave. The Surf
-              Ranch & Full Circle.
-            </Typography>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid item xs={12}>
-        <ReactPlayer
-          playing={true}
-          loop={true}
-          url={home_files[48]}
-          width="100%"
-        />
-        <Typography className={classes.content_font} paragraph>
-          A CONVERSATION WITH MARC ANDREINI AND THOMAS MEYERHOFFER
-        </Typography>
-      </Grid>
 
-      <Grid item xs={6}>
-        <Divider />
-      </Grid>
+        <Grid item>
+          <Typography className={classes.content_font}>
+            A CONVERSATION WITH MARC ANDREINI AND THOMAS MEYERHOFFER
+          </Typography>
+        </Grid>
 
-      <Grid item xs={12}>
-        <Typography variant="h4" className={classes.title_font} paragraph>
-          SLIP IN
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <img src={home_files[63]} width="100%" alt="meyerhoffer.com" />
-        <Typography className={classes.content_font} paragraph>
-          Early Slip In protoype, this board won Best In Show at The Boardroom
-          Show
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <ReactPlayer
-          controls={true}
-          loop={true}
-          url="https://youtu.be/9fHlE8H6HPQ"
-          width="100%"
-          height="100%"
-        />
-        <Typography className={classes.content_font} paragraph>
-          Josh Mulcoy on the Slip In somehwere in Mexcio.
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Grid
-          container
-          directio="row"
-          justifyContent="space-evenly"
-          alignItems="center"
-        >
-          <Grid item xs={12} md={4}>
-            <img
-              src={home_files[64]}
-              width="100%"
-              height="100%"
-              alt="meyerhoffer.com"
-            />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <img src={home_files[65]} width="100%" alt="meyerhoffer.com" />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <img src={home_files[66]} width="100%" alt="meyerhoffer.com" />
-            <Typography className={classes.content_font_sboard} paragraph>
-              Surf In Surfboard. 2010
-            </Typography>
-          </Grid>
+        <Grid item xs={12}>
+          <hr className={classes.hr_line} />
         </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <img src={home_files[67]} width="100%" alt="meyerhoffer.com" />
-        <Typography className={classes.content_font}>
-          Josh Mulcoy in mex
-        </Typography>
+
+      {/* Section 2 - SLIP IN */}
+      <Grid container direction="column" spacing={6}>
+        <Grid item xs={12}>
+          <Typography className={classes.title_font} paragraph>
+            SLIP IN
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={8}>
+          <img
+            src={home_files[63]}
+            width="100%"
+            height="100%"
+            alt="meyerhoffer.com"
+          />
+          <Typography paragraph className={classes.content_font}>
+            Early Slip In protoype, this board won Best In Show at The Boardroom
+            Show
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={8}>
+          <ReactPlayer
+            controls={true}
+            width="100%"
+            url="https://youtu.be/9fHlE8H6HPQ"
+          />
+          <Typography paragraph className={classes.content_font}>
+            Josh Mulcoy on the Slip In somehwere in Mexcio.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={6} md={4}>
+          <img
+            src={home_files[64]}
+            width="100%"
+            height="100%"
+            alt="meyerhoffer.com"
+          />
+        </Grid>
+
+        <Grid item xs={6} md={4}>
+          <img src={home_files[65]} width="100%" alt="meyerhoffer.com" />
+        </Grid>
+
+        <Grid item xs={6} md={4}>
+          <img src={home_files[66]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font_sboard} paragraph>
+            Surf In Surfboard. 2010
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={8}>
+          <img src={home_files[67]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font}>
+            Josh Mulcoy in mex
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <hr className={classes.hr_line} />
+        </Grid>
       </Grid>
 
-      <Grid item xs={12}>
-        <Divider />
+      {/*SECTION 3 -  SURFERS BLOOD*/}
+      <Grid container direction="column" spacing={6}>
+        <Grid item xs={12}>
+          <Typography className={classes.title_font}>
+            SURFERS<span className={classes.content_font_sboard}>BLOOD.</span>
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <ReactPlayer
+            controls={true}
+            url={home_files[62]}
+            width="100%"
+            height="100%"
+          />
+          <Typography className={classes.content_font} paragraph>
+            Watch SURFERS BLOOD. The award winning surf movie by Patrick Trefz.
+            Watch Thomas together with Basque surfers Kepa Acero, Natxo Gonzalez
+            and Californian's Flea Vitrostko, Josh Mulcoy, Richard Kenvin and
+            Shawn Barron. 2016.
+          </Typography>
+        </Grid>
+        <Grid item xs={6} md={5}>
+          <img src={home_files[61]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Patrick Trefz & Thomas at the world premier during San Sebastian's
+            film festival
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <hr className={classes.hr_line} />
+        </Grid>
       </Grid>
 
-      <Grid item xs={12}>
-        <Typography variant="h4" paragraph className={classes.content_font}>
-          SURFERS<span className={classes.content_font_sboard}>BLOOD.</span>
-        </Typography>
+      {/* SECTION 4 : Flex fin by Futures.*/}
+      <Grid container direction="column" spacing={6}>
+        <Grid item xs={12}>
+          <Typography variant="h4" className={classes.title_font}>
+            Flex fin by Futures.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={9}>
+          <img
+            src={home_files[60]}
+            width="100%"
+            height="100%"
+            alt="meyerhoffer.com"
+          />
+          <Typography className={classes.content_font} paragraph>
+            Flex Fin by Futures
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <hr className={classes.hr_line} />
+        </Grid>
       </Grid>
 
-      <Grid item xs={12}>
-        <ReactPlayer
-          playing={true}
-          loop={true}
-          url={home_files[62]}
-          width="100%"
-        />
-        <Typography className={classes.content_font} paragraph>
-          Watch SURFERS BLOOD. The award winning surf movie by Patrick Trefz.
-          Watch Thomas together with Basque surfers Kepa Acero, Natxo Gonzalez
-          and Californian's Flea Vitrostko, Josh Mulcoy, Richard Kenvin and
-          Shawn Barron. 2016.
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <img src={home_files[61]} width="100%" alt="meyerhoffer.com" />
-        <Typography className={classes.content_font} paragraph>
-          Patrick Trefz & Thomas at the world premier during San Sebastian's
-          film festival
-        </Typography>
-      </Grid>
+      {/* SECTION 5 : Surf shop.*/}
+      <Shop />
 
       <Grid item xs={12}>
-        <Divider />
+        <hr className={classes.hr_line} />
       </Grid>
 
-      <Grid item xs={12}>
-        <Typography variant="h4" className={classes.content_font}>
-          Flex fin by Futures.
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <img src={home_files[60]} width="100%" alt="meyerhoffer.com" />
-      </Grid>
-
-      <Grid item xs={12}>
-        <Divider />
-      </Grid>
-
+       {/* SECTION 6 : THE JOURNEY  AND THE PEOPLE.*/}
       <Grid item xs={12}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <Typography variant="h4" paragraph className={classes.title_font}>
-              THE JOURNEY AND THE PEOPLE.
+              THE JOURNEY <br/>
+              AND THE PEOPLE.
             </Typography>
           </Grid>
           <Grid item xs={12}>
@@ -280,13 +350,6 @@ const LinkPSD = () => {
             </Grid>
           </Grid>
           <Grid item xs={12}>
-            <img src={home_files[53]} width="100%" alt="meyerhoffer.com" />
-            <Typography className={classes.content_font} paragraph>
-              Thomas outside his old studio
-            </Typography>
-          </Grid>
-
-          <Grid item xs={12}>
             <Grid
               container
               directio="row"
@@ -294,6 +357,12 @@ const LinkPSD = () => {
               justifyContent="space-evenly"
               alignItems="center"
             >
+              <Grid item xs={12} md={8}>
+                <img src={home_files[53]} width="100%" alt="meyerhoffer.com" />
+                <Typography className={classes.content_font} paragraph>
+                  Thomas outside his old studio
+                </Typography>
+              </Grid>
               <Grid item xs={12} md={6}>
                 <img src={home_files[55]} width="100%" alt="meyerhoffer.com" />
                 <Typography className={classes.content_font} paragraph>
@@ -306,29 +375,25 @@ const LinkPSD = () => {
                   Pukas Family with Bob, Cedric and Steve.
                 </Typography>
               </Grid>
+              <Grid item xs={12} md={6}>
+                <img src={home_files[57]} width="100%" alt="meyerhoffer.com" />
+                <Typography className={classes.content_font} paragraph>
+                  Bob Mc Tavish and Thomas surfing Geuthary
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <img src={home_files[59]} width="100%" alt="meyerhoffer.com" />
+                <Typography className={classes.content_font} paragraph>
+                  Baja, San Somewhere. On our way to one of the favorite testing
+                  grounds. Stack of board in the back.
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
-
-          <Grid item xs={12}>
-            <img src={home_files[57]} width="100%" alt="meyerhoffer.com" />
-            <Typography className={classes.content_font} paragraph>
-              Bob Mc Tavish and Thomas surfing Geuthary
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <img src={home_files[59]} width="100%" alt="meyerhoffer.com" />
-            <Typography className={classes.content_font} paragraph>
-              Baja, San Somewhere. On our way to one of the favorite testing
-              grounds. Stack of board in the back.
-            </Typography>
           </Grid>
         </Grid>
       </Grid>
 
-      <Grid item xs={12}>
-        <Divider />
-      </Grid>
-
+      {/* SECTION 7 : Bio.*/}
       <Grid item xs={12}>
         <Grid container direction="column">
           <Grid item xs={12}>
@@ -346,7 +411,7 @@ const LinkPSD = () => {
               PROJECT: THE SURFBOARD PROJECT
             </Typography>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} md={8}>
             <Typography
               align="justify"
               paragraph

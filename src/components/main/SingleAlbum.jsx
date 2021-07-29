@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
-    background: "#a6d4fa",
   },
   itemLink: {
     textDecoration: "none",
     fontFamily: "Century",
+    fontSize: "11px",
+    color: "#000000",
   },
 }));
 
