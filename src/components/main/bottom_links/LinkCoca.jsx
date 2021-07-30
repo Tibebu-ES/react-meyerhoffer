@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
   par_font: {
     fontFamily: "Century",
     fontSize: "13px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "11px",
+    },
   },
   top_content: {
     marginTop: "100px",
