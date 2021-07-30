@@ -10,6 +10,7 @@ import {
   LinkPSD,
   LinkCoca,
   LinkHundred,
+  LinkApple,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/archive-surf" component={LinkPSD} />
         <Route exact path="/archive-coke" component={LinkCoca} />
         <Route exact path="/archive-tork" component={LinkHundred} />
+        <Route exact path="/archive-apple" component={LinkApple} />
       </Switch>
       <Footer />
     </div>

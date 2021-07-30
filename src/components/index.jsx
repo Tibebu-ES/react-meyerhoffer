@@ -8,6 +8,7 @@ import LinkBloomberg from "./main/bottom_links/LinkBloomberg";
 import LinkPSD from "./main/bottom_links/LinkPSD";
 import LinkCoca from "./main/bottom_links/LinkCoca";
 import LinkHundred from "./main/bottom_links/LinkHundred";
+import LinkApple from "./main/bottom_links/LinkApple";
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   LinkPSD,
   LinkCoca,
   LinkHundred,
+  LinkApple,
 };
