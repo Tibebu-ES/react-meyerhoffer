@@ -1,23 +1,14 @@
-import React, { useState } from "react";
-import {
-  Paper,
-  Container,
-  Box,
-  Button,
-  Grid,
-  Typography,
-  Drawer,
-  IconButton,
-  Divider,
-} from "@material-ui/core";
-import ReactPlayer from "react-player";
+import React from "react";
+import { Paper, Container, Grid, Typography } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
-import { ArrowRight, ArrowLeft, NavigateBefore } from "@material-ui/icons";
 import { home_files } from "../data/index";
 import { makeStyles } from "@material-ui/core/styles";
-import BottomLinks from "./bottom_links/BottomLinks";
+import CarouselView from "./CarouselViewer";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: "50px",
+  },
   drawerHeader: {
     background: "#1768AC",
   },
@@ -30,20 +21,38 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "10px",
     },
   },
+  images: {
+    width: "100%",
+    height: "100%",
+  },
+  img_title: {
+    fontFamily: "Century",
+  },
+  grid_item: {
+    marginBottom: "20px",
+    marginRight: "10px",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "10px",
+    },
+  },
+  btn_link: {
+    fontFamily: "Century",
+    fontSize: "12px",
+    textDecoration: "none",
+    padding: "8px",
+    border: "1px solid #0645ad",
+    color: "#0645ad",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "10px",
+      padding: "5px",
+    },
+  },
 }));
 
 const Home = () => {
-  var items = [
-    home_files[5],
-    home_files[6],
-    home_files[7],
-    home_files[8],
-    home_files[9],
-  ];
+  let items = home_files.slice(5, 10);
 
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
-  const [choose, setChoose] = useState(false);
 
   function Item(props) {
     return (
@@ -58,366 +67,204 @@ const Home = () => {
     );
   }
 
-  const handleDrawerOpen = (choose) => {
-    setChoose(choose);
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-    setChoose("");
-  };
-
   return (
-    <Container>
-      <Box display="flex" flexDirection="column">
-        <Box m={5}>
-          <ReactPlayer
-            playing={true}
-            loop={true}
-            url={home_files[0]}
-            width="100%"
-            height="100%"
+    <Container className={classes.root}>
+      <Grid container direction="column" spacing={10} alignItems="center">
+        <Grid item xs={12}>
+          <img
+            src={home_files[0]}
+            className={classes.images}
+            alt="meyerhoffer.com"
           />
-        </Box>
-        <Box m={5}>
-          <Paper variant="outlined">
-            <img
-              src={home_files[1]}
-              style={{ width: "90%" }}
-              alt="meyerhoffer.com"
-            />
-          </Paper>
-        </Box>
-        <Box m={5}>
-          <ReactPlayer
-            playing={true}
-            loop={true}
-            url={home_files[2]}
-            width="100%"
-            height="100%"
-          />
-        </Box>
-
-        <Box m={5}>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container direction="column">
+            <Grid item>
+              <a className={classes.img_title} href="/archive-latch">
+                LATCH
+              </a>
+            </Grid>
+            <Grid item>
+              <img
+                src={home_files[1]}
+                className={classes.images}
+                alt="meyerhoffer.com"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container direction="column">
+            <Grid item>
+              <a className={classes.img_title} href="/archive-surf">
+                SURFBOARDS
+              </a>
+            </Grid>
+            <Grid item>
+              <img
+                src={home_files[2]}
+                className={classes.images}
+                alt="meyerhoffer.com"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={8}>
           <Carousel
             navButtonsAlwaysVisible="true"
             autoPlay="true"
             animation="slide"
-            NextIcon={<ArrowRight />}
-            PrevIcon={<ArrowLeft />}
           >
             {items.map((item, i) => (
-              <Item key={i} item={item} />
+              <CarouselView key={i} item={item} />
             ))}
           </Carousel>
-        </Box>
-
-        <Box display="flex" flexDirection="row">
-          <Box m={5}>
-            <Paper variant="outlined">
+        </Grid>
+        <Grid item xs={12}>
+          <img
+            src={home_files[3]}
+            className={classes.images}
+            alt="meyerhoffer.com"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container direction="column">
+            <Grid item>
+              <a className={classes.img_title} href="/archive-latch">
+                LATCH
+              </a>
+            </Grid>
+            <Grid item>
               <img
-                src={home_files[1]}
-                style={{ width: "100%" }}
+                src={home_files[4]}
+                className={classes.images}
                 alt="meyerhoffer.com"
               />
-            </Paper>
-          </Box>
-          <Box m={5}>
-            <ReactPlayer
-              playing={true}
-              loop={true}
-              url={home_files[2]}
-              width="100%"
-              height="100%"
-            />
-          </Box>
-        </Box>
-
-        {/*bootom links */}
-        <Grid container spacing={1} direction="row">
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("latch")}
-            >
-              <span className={classes.bottomLinkButText}>
-                {" "}
-                Latch start up going public @ 1.6B
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("bloomberg")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Mike Bloomberg Presidential Stragety
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("psd")}
-            >
-              <span className={classes.bottomLinkButText}>Design Patents</span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="small"
-              onClick={() => handleDrawerOpen("psd")}
-            >
-              <span className={classes.bottomLinkButText}>
-                A life as a surfer
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="small"
-              onClick={() => handleDrawerOpen("psd")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Surfboard designer
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="small"
-              onClick={() => handleDrawerOpen("coca")}
-            >
-              <span className={classes.bottomLinkButText}>Coca-Cola Glass</span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("hundred")}
-            >
-              <span className={classes.bottomLinkButText}>
-                100 Million users every day
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>
-                Cappellini chair
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>
-                Outside Magazine cover story
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>
-                Occasional race car dirver
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>
-                Thomas talks with Tom Sachs
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>
-                Multiple International design awards
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="small"
-              onClick={() => handleDrawerOpen("apple")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Apple design group
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("colette")}
-            >
-              <span className={classes.bottomLinkButText}>Colette Paris</span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("psd")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Slip In single fin
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("startup")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Start Up design and brand strategy
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("baldface")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Bald Face home made snowboard
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("softcomputer")}
-            >
-              <span className={classes.bottomLinkButText}>Soft Computer</span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("skigoggle")}
-            >
-              <span className={classes.bottomLinkButText}>
-                First modern ski goggle
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("porsche")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Porsche Design Intern
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen("snow")}
-            >
-              <span className={classes.bottomLinkButText}>
-                Up-cycled Snowboard
-              </span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>Medical design</span>
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="outlined"
-              size="small"
-              color="primary"
-              onClick={() => handleDrawerOpen()}
-            >
-              <span className={classes.bottomLinkButText}>
-                Surfer surfing the boards all over the world
-              </span>
-            </Button>
+            </Grid>
           </Grid>
         </Grid>
-      </Box>
-      <Drawer variant="persistent" anchor="left" open={open}>
-        <div className={classes.drawerHeader}>
-          <IconButton
-            onClick={handleDrawerClose}
-            className={classes.navIcon}
-            edge="end"
-          >
-            <NavigateBefore />
-          </IconButton>
-        </div>
-        <Divider />
-        <BottomLinks choose={choose} />
-      </Drawer>
+
+        {/*bootom links */}
+        <Grid item xs={12}>
+          <Grid container direction="row">
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-latch">
+                Latch start up going public @ 1.6B
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-bloomberg">
+                Mike Bloomberg Presidential Stragety
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-surf">
+                Design Patents
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-surf">
+                A life as a surfer
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-surf">
+                Surfboard designer
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-coke">
+                Coca-Cola Glass
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-tork">
+                100 Million users every day
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-cappellini">
+                Cappellini chair
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/outsidemagazine">
+                Outside Magazine cover story
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/about">
+                Occasional race car dirver
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/about">
+                Thomas talks with Tom Sachs
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/about">
+                Multiple International design awards
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-apple">
+                Apple design group
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-coke">
+                Colette Paris
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-surf">
+                Slip In single fin
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-latch">
+                Start Up design and brand strategy
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-snowboard">
+                Bald Face home made snowboard
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-chumby">
+                Soft Computer
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-skigoggles">
+                First modern ski goggle
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-porsche">
+                Porsche Design Intern
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-snowboard">
+                Up-cycled Snowboard
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/about">
+                Medical design
+              </a>
+            </Grid>
+            <Grid item className={classes.grid_item}>
+              <a className={classes.btn_link} href="/archive-surf">
+                Surfer surfing the boards all over the world
+              </a>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </Container>
   );
 };

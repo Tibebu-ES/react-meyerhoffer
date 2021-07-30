@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
-    background: "#a6d4fa",
   },
   itemLink: {
     fontFamily: "Century",
@@ -38,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
   mini_title: {
     fontFamily: "century",
   },
+  title_font: {
+    fontFamily: "GenathDisplay",
+    fontWeight: "bold",
+    fontSize: "56px",
+  },
 }));
 
 const Shop = () => {
@@ -45,40 +49,20 @@ const Shop = () => {
 
   return (
     <Container className={classes.cardGrid} maxWidth="lg">
+      <Grid container xs={12}>
+        <Typography variant="h4" className={classes.title_font}>
+          Surf Shop
+        </Typography>
+      </Grid>
+
       <Grid container spacing={10}>
         {shop_files.map((file) => (
           <Grid item key={file} xs={12} sm={6} md={4}>
             {file.asset === shop_files[0].asset ||
             file.asset === shop_files[10].asset ? (
-              <Card className={classes.card}>
-                <ReactPlayer
-                  playing={true}
-                  loop={true}
-                  url={file.asset}
-                  width="100%"
-                  height="100%"
-                />
-
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="span">
-                    <Box display="flex" flexDirection="column">
-                      <Box>
-                        <Link to="/" className={classes.itemLink}>
-                          {" "}
-                          {file.caption}
-                        </Link>
-                      </Box>
-                      <Box pt={1}>
-                        <Link to="/" className={classes.itemLink}>
-                          <strong>{file.price}</strong>
-                        </Link>
-                      </Box>
-                    </Box>
-                  </Typography>
-                </CardContent>
-              </Card>
+              <SingleAlbum file={file} fileType="video" />
             ) : (
-              <SingleAlbum file={file} />
+              <SingleAlbum file={file} fileType="image" />
             )}
           </Grid>
         ))}

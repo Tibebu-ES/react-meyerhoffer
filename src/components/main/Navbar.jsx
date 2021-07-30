@@ -23,8 +23,12 @@ const useStyles = makeStyles((theme) => ({
 
   nav_link: {
     fontFamily: "Century",
+    fontSize: "20px",
     color: "#000000",
     textDecoration: "none",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+    },
   },
   modal: {
     display: "block",

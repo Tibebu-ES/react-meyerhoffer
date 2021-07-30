@@ -1,156 +1,190 @@
-import React, { useState } from "react";
-import {
-  Typography,
-  ImageListItemBar,
-  ImageList,
-  ImageListItem,
-  IconButton,
-  Grid,
-  Modal,
-  Fade,
-  Backdrop,
-} from "@material-ui/core";
+import React from "react";
+import { Grid, Typography, Link, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { home_files, object_files } from "../../data/index";
-import { StarBorder } from "@material-ui/icons";
-import LinkLatchModal from "./LinkLatchModal";
+import { object_files, home_files } from "../../data/index";
+import ReactPlayer from "react-player";
 
 const useStyles = makeStyles((theme) => ({
-  bg_ground: {
-    background:
-      "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+  root: {
+    padding: "6.25vw 6.25vw  0 6.25vw;",
   },
-  top_grid: {
-    marginTop: "15px",
-    marginBottom: "20px",
+  bio_grid: {
+    marginTop: "50px",
   },
   par_content: {
     fontFamily: "Century",
+    fontSize: "13px",
+    color: "#000000",
+    width: "62.5vw",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "11px",
+      width: "100%",
+    },
   },
-  modal: {
-    alignItems: "center",
-    justifyContent: "center",
-    maxWidth: "60%",
-    maxHeight: "100%",
-    overflow: "scroll",
+  title: {
+    fontFamily: "GenathDisplay",
+    fontWeight: 700,
+    fontSize: "56px",
+    color: "#1c1c1c",
   },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+  title_grid: {
+    marginTop: "45px",
+    marginBottom: "35px",
+  },
+  shop_item_vertical: {},
+  shop_item_horizontal: {},
+  img: {
+    maxWidth: "100%",
   },
 }));
 
 const LinkLatch = () => {
   const classes = useStyles();
 
-  const itemData = home_files.slice(10, 14);
-
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  function srcset(image, width, height, rows = 1, cols = 1) {
-    return `${image}?w=${width * cols}&h=${
-      height * rows
-    }&fit=crop&auto=format 1x,
-  ${image}?w=${width * cols}&h=${height * rows}&fit=crop&auto=format 1x`;
-  }
   return (
-    <div>
-      <Grid container spacing={2}>
-        <Grid item xs={12} style={{ marginTop: "15px" }}>
-          <Typography
-            variant="h3"
-            align="center"
-            style={{ fontFamily: "GenathDisplay" }}
-          >
-            YES, WE DID AN APPLE.
+    <Grid container direction="column" className={classes.root}>
+      <Grid container spacing={2} direction="column">
+        <Grid item xs={12} className={classes.title_grid}>
+          <Typography variant="h3" className={classes.title}>
+            WE DID <br />
+            AN APPLE.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={8} style={{ marginTop: "20px" }}>
-          <Typography className={classes.par_content} align="justify" paragraph>
-            As Co-founder and CDO of LATCH, Thomas was instrumental in designing
-            the unique and innovative hardware in which LATCH runs its operating
-            system, LATCH OS. LATCH has built a proprietary ecosystem of
-            hardware, software, and services, enabling people to live and work
-            in new ways. Latch (LTCH) is going public with a $ 1.6B valuation in
-            June 2021.
+        <Grid item xs={12}>
+          <Typography className={classes.par_content} paragraph>
+            Thomas is Co-founder and CDO of LATCH and responsible for creating
+            Latch unique and innovative hardware platform on which LATCH
+            developed an operating system and services. With strategic design
+            thinking LATCH has built a proprietary ecosystem of hardware,
+            software, and services, enabling people to live and work in better
+            ways. Latch (LTCH) went public with a $ 1.6B valuation in June of
+            2021.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4} style={{ marginTop: "20px" }}>
+      </Grid>
+
+      <Grid container spacing={10} direction="column">
+        <Grid item xs={6} className={classes.shop_item_vertical}>
           <img
             src={object_files[0].asset}
-            style={{ height: "90%", width: "60%", marginLeft: "50px" }}
-            alt="Product"
+            className={classes.img}
+            alt="Meyerhoffer design projects"
+          />
+        </Grid>
+
+        <Grid item xs={12} md={8} className={classes.shop_item_horizontal}>
+          <img
+            src={home_files[84]}
+            className={classes.img}
+            alt="Meyerhoffer design projects"
+          />
+        </Grid>
+
+        <Grid item xs={6} className={classes.shop_item_vertical}>
+          <img
+            src={home_files[81]}
+            className={classes.img}
+            alt="Meyerhoffer design projects"
+          />
+          <Typography className={classes.par_content} align="justify" paragraph>
+            <Button component={Link} href={home_files[14]} target="_blank">
+              <u className={classes.par_content}>Read the Medium article</u>
+            </Button>
+            Latch's first investor Brad Svrluga, General Partner @ Primary
+            Venture Partners, wrote about how he met Luke and Thomas and what
+            made him understand why this project was special.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={6} className={classes.shop_item_horizontal}>
+          <img
+            src={home_files[82]}
+            className={classes.img}
+            alt="Meyerhoffer design projects"
+          />
+        </Grid>
+
+        <Grid item xs={12} md={8} className={classes.shop_item_horizontal}>
+          <ReactPlayer
+            playing={true}
+            loop={true}
+            url={home_files[83]}
+            width="100%"
+            height="100%"
+          />
+          <Typography className={classes.par_content}>
+            Latch Lens in action. Designed technology, enabling new
+            possibilities.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={8} className={classes.shop_item_horizontal}>
+          <img
+            src={home_files[10]}
+            className={classes.img}
+            alt="Meyerhoffer design projects"
+          />
+        </Grid>
+
+        <Grid item xs={12} md={8} className={classes.shop_item_horizontal}>
+          <img
+            src={home_files[12]}
+            className={classes.img}
+            alt="Meyerhoffer design projects"
+          />
+
+          <Typography className={classes.par_content} paragraph>
+            Thomas searched for the meaning of the object, aiming to create an
+            iconic family of universally understood products that will last for
+            a long time.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={8} className={classes.shop_item_horizontal}>
+          <img
+            src={home_files[13]}
+            className={classes.img}
+            alt="meyerhoffer.com"
+          />
+        </Grid>
+
+        <Grid item xs={6} className={classes.shop_item_horizontal}>
+          <img
+            src={home_files[11]}
+            className={classes.img}
+            alt="meyerhoffer.com"
           />
         </Grid>
       </Grid>
-      <ImageList
-        sx={{ width: 400, height: 350, transform: "translateZ(0)" }}
-        rowHeight={250}
-        gap={2}
-      >
-        {itemData.map((item) => {
-          const cols = item.featured ? 2 : 1;
-          const rows = item.featured ? 2 : 1;
 
-          return (
-            <ImageListItem key={item.img} cols={cols} rows={rows}>
-              <img
-                srcSet={srcset(item.img, 250, 200, rows, cols)}
-                alt={item.title}
-                loading="lazy"
-              />
-              <ImageListItemBar
-                sx={classes.bg_ground}
-                title={item.title}
-                position="bottom"
-                actionIcon={
-                  <IconButton
-                    sx={{ color: "white" }}
-                    aria-label={`star ${item.title}`}
-                  >
-                    <StarBorder />
-                  </IconButton>
-                }
-                actionPosition="right"
-              />
-            </ImageListItem>
-          );
-        })}
-      </ImageList>
-      <Grid container spacing={2} direction="column">
+      <Grid
+        container
+        spacing={2}
+        direction="column"
+        className={classes.bio_grid}
+      >
         <Grid item>
-          <Typography variant="body1">PROJECT: LATCH</Typography>
+          <Typography className={classes.par_content}>
+            PROJECT: LATCH <br />
+            YEAR: 2015-2021
+          </Typography>
         </Grid>
-        <Grid item>
-          <Typography variant="body1">YEAR: 2015-2021</Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+        <Grid item xs={12}>
+          <Typography variant="body1" paragraph className={classes.par_content}>
             INFORMATION: Thomas is Co-founder & Chief Design Officer of Latch,
             responsible for Design, Experience and Brand. He started Latch
             together with Luke Schoenfelder and Brian Jones in 2015.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+
+          <Typography variant="body1" paragraph className={classes.par_content}>
             Thomas finds projects that deal with fundamental parts of our daily
             life particularly interesting. How do we keep traditional values
             when we transition into the virtual world? A digital experience
             should deliver the same sense of meaning we already know and
             understand.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+
+          <Typography variant="body1" paragraph className={classes.par_content}>
             Latch was designed with trust, longevity and mindfulness as guiding
             values. The aim was to create a system that is so simple to
             understand that anyone, anywhere in the world, is able to take part
@@ -158,96 +192,73 @@ const LinkLatch = () => {
             interaction between the many participants and services that is part
             of our modern village.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+
+          <Typography variant="body1" paragraph className={classes.par_content}>
             "When you aim to create a simple, universal and human experience,
             you need to lead with humanistic values, not digital complexity,"
             says Thomas. Latch design is mindful of technology and digital
             privacy limitations so users can connect on a personal level.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+
+          <Typography variant="body1" paragraph className={classes.par_content}>
             The Latch lens is perhaps the core invention of the Latch ecosystem.
             All Latch products share this same simple interface. It's inviting
             and easy to understand. Billed by The New York Times as the "the
             unblinking eye". Its simple design a key to Latch success.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+
+          <Typography variant="body1" paragraph className={classes.par_content}>
             Latch is going public at a $ 1.6B valuation on June 7th, 2021.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+
+          <Typography variant="body1" paragraph className={classes.par_content}>
             RECOGNITION: Latch has been recognized with eleven international
             design awards 2016-2019.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
-            4x Good Design Australia Awards
+
+          <Typography variant="body1" className={classes.par_content}>
+            Four Good Design Australia Awards
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
-            4x IF Awards
+
+          <Typography variant="body1" className={classes.par_content}>
+            Four IF Awards
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
-            2x IDSA award
+
+          <Typography variant="body1" className={classes.par_content}>
+            Two IDSA award
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
-            Good Design Award (USA)
+
+          <Typography variant="body1" className={classes.par_content}>
+            One Good Design Award (USA)
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+          <br />
+          <Typography variant="body1" className={classes.par_content}>
             SELECT PRESS
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
-            The New York Times(Link)
+          <br />
+          <Typography variant="body1" className={classes.par_content}>
+            <a href="/newyorktimes" className={classes.par_content}>
+              The New York Times(Link)
+            </a>
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
-            Medium article Brad Svrluga, General Partner @ Primary Venture
-            Partners
+          <Typography variant="body1" className={classes.par_content}>
+            <a
+              className={classes.par_content}
+              rel="noreferrer"
+              target="_blank"
+              href={home_files[14]}
+            >
+              Medium article
+            </a>{" "}
+            Brad Svrluga, General Partner @ Primary Venture Partners
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.par_content} variant="body1">
+          <br />
+          <Typography variant="body1" className={classes.par_content}>
             CREDITS: Photography: Christoffer Dalkarls
           </Typography>
         </Grid>
       </Grid>
-
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <div className={classes.paper}>
-            <LinkLatchModal />
-          </div>
-        </Fade>
-      </Modal>
-    </div>
+    </Grid>
   );
 };
 

@@ -1,41 +1,99 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { Grid, Typography, ImageListItem, ImageList } from "@material-ui/core";
-import { home_files } from "../../data/index";
+import { Grid, Typography } from "@material-ui/core";
+import { home_files, object_files } from "../../data";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: "10vw 6.25vw  0 6.25vw;",
+  },
   par_font: {
     fontFamily: "Century",
+    fontSize: "13px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "11px",
+    },
+  },
+  top_content: {
+    marginTop: "100px",
   },
 }));
 
 const LinkCoca = () => {
-  const itemData = home_files.slice(19, 25);
   const classes = useStyles();
-
   return (
-    <Grid container direction="column" spacing={2}>
-      <Grid item xs={12}>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {itemData.map((item) => (
-            <ImageListItem key={item}>
-              <img
-                srcSet={`${item}?w=161&fit=crop&auto=format 1x, ${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                loading="lazy"
-                alt=" "
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+    <Grid container spacing={10} className={classes.root}>
+      <Grid item xs={12} md={8}>
+        <img
+          src={home_files[19]}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
       </Grid>
-      <Grid item xs={12}>
-        <Typography className={classes.par_font}>PROJECT: COCA-COLA</Typography>
+      <Grid item xs={12} md={8}>
+        <img
+          src={home_files[20]}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
       </Grid>
-      <Grid item xs={12}>
-        <Typography className={classes.par_font}>YEAR: 2013</Typography>
+      <Grid item xs={12} md={8}>
+        <img
+          src={home_files[21]}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
       </Grid>
-      <Grid item xs={12}>
-        <Typography paragraph className={classes.par_font}>
+
+      <Grid item xs={12} md={8}>
+        <img
+          src={object_files[4].asset}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
+      </Grid>
+
+      <Grid item xs={6} md={5}>
+        <img
+          src={home_files[22]}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
+      </Grid>
+
+      <Grid item xs={12} md={8}>
+        <img
+          src={home_files[23]}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
+        <Typography className={classes.par_font}>
+          Opening party at Colette, Paris, 2013
+        </Typography>
+      </Grid>
+
+      <Grid item xs={12} md={8}>
+        <img
+          src={home_files[24]}
+          width="100%"
+          height="100%"
+          alt="meyerhoffer.com"
+        />
+      </Grid>
+
+      <Grid item xs={12} className={classes.top_content}>
+        <Typography className={classes.par_font} paragraph>
+          PROJECT: COCA-COLA <br />
+          YEAR: 2013
+        </Typography>
+
+        <Typography className={classes.par_font} paragraph>
           INFORMATION: The purest form possible. The design of the Coca-Cola
           glass is guided by functionality. Exploring the external form and
           internal force. Balancing proportions and refining outline down to the
@@ -43,21 +101,13 @@ const LinkCoca = () => {
           of the glass and has succeeded in becoming a contemporary symbol of
           the Coca-Cola brand identity. Launched at Colette, Paris, 2013.
         </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography className={classes.par_font}>
+
+        <Typography className={classes.par_font} paragraph>
           RECOGNITION:IDSA Award 2014
         </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography className={classes.par_font}></Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography className={classes.par_font}></Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography className={classes.par_font}>CREDITS:</Typography>
+
         <Typography className={classes.par_font}>
+          CREDITS: <br />
           Photography: Christoffer Dalkarls, Colette.
         </Typography>
       </Grid>
