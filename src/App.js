@@ -12,6 +12,7 @@ import {
   LinkHundred,
   LinkApple,
   LinkSnowboard,
+  LinkSoftComputer,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/archive-tork" component={LinkHundred} />
         <Route exact path="/archive-apple" component={LinkApple} />
         <Route exact path="/archive-snowboard" component={LinkSnowboard} />
+        <Route exact path="/archive-chumby" component={LinkSoftComputer} />
       </Switch>
       <Footer />
     </div>
