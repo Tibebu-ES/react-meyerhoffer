@@ -9,6 +9,7 @@ import LinkPSD from "./main/bottom_links/LinkPSD";
 import LinkCoca from "./main/bottom_links/LinkCoca";
 import LinkHundred from "./main/bottom_links/LinkHundred";
 import LinkApple from "./main/bottom_links/LinkApple";
+import LinkSnowboard from "./main/bottom_links/LinkSnowboard";
 
 export {
   Home,
@@ -22,4 +23,5 @@ export {
   LinkCoca,
   LinkHundred,
   LinkApple,
+  LinkSnowboard,
 };
