@@ -152,6 +152,7 @@ import c77 from "../../assets/images/hb_link1/blatch1.1.jpg";
 import c78 from "../../assets/images/hb_link1/blatch1.2.jpg";
 import c79 from "../../assets/images/hb_link1/blatch6.mp4";
 import c80 from "../../assets/images/hb_link1/blatch1.3.jpg";
+import c81 from "../../assets/images/hb_link3457/pic_6.mp4";
 
 // about component
 import a1 from "../../assets/images/a1.gif";
@@ -164,7 +165,7 @@ import a9 from "../../assets/pdf/domus.pdf";
 import a10 from "../../assets/pdf/casedeabitare.pdf";
 
 // shop component
-import s1 from "../../assets/images/9.gif";
+import s1 from "../../assets/videos/9.mp4";
 import s2 from "../../assets/images/shop/sh_2.jpg";
 import s3 from "../../assets/images/shop/sh_3.jpg";
 import s4 from "../../assets/images/shop/sh_4.jpg";
@@ -174,7 +175,7 @@ import s6 from "../../assets/images/shop/sh_6.jpg";
 import s7 from "../../assets/images/shop/sh_7.jpg";
 import s8 from "../../assets/images/shop/sh_8.jpg";
 import s9 from "../../assets/images/shop/sh_9.jpg";
-import s10 from "../../assets/images/27.gif";
+import s10 from "../../assets/videos/27.mp4";
 import s11 from "../../assets/images/shop/sh_11.jpg";
 import s12 from "../../assets/images/shop/sh_12.jpg";
 import s13 from "../../assets/images/shop/sh_13.jpg";
@@ -285,6 +286,7 @@ const home_files = [
   c78,
   c79,
   c80,
+  c81,
 ];
 
 const object_files = [

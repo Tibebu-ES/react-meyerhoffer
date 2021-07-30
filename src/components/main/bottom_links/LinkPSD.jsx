@@ -34,6 +34,9 @@ const useStyle = makeStyles((theme) => ({
     marginBottom: "50px",
   },
   img: { width: "100%", height: "auto" },
+  bio_section: {
+    marginTop: "80px",
+  },
 }));
 
 const LinkPSD = () => {
@@ -272,129 +275,107 @@ const LinkPSD = () => {
         <hr className={classes.hr_line} />
       </Grid>
 
-       {/* SECTION 6 : THE JOURNEY  AND THE PEOPLE.*/}
-      <Grid item xs={12}>
-        <Grid container spacing={4}>
-          <Grid item xs={12}>
-            <Typography variant="h4" paragraph className={classes.title_font}>
-              THE JOURNEY <br/>
-              AND THE PEOPLE.
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              directio="row"
-              spacing={1}
-              justifyContent="space-evenly"
-              alignItems="center"
-            >
-              <Grid item xs={12} md={6}>
-                <img src={home_files[49]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Original Board
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[50]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Thomas first boards, featured in The New York Times and at The
-                  Cooper Hewitt Triennial in 1996
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              directio="row"
-              spacing={1}
-              justifyContent="space-evenly"
-              alignItems="center"
-            >
-              <Grid item xs={12} md={6}>
-                <img src={home_files[56]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Quiver from 2016
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[52]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Shapings
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              directio="row"
-              spacing={1}
-              justifyContent="space-evenly"
-              alignItems="center"
-            >
-              <Grid item xs={12} md={6}>
-                <img src={home_files[51]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  LegoZoo one of Thomas first boards, featured in The Surfers
-                  Journal
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[54]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Mike with Original 9.1
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              directio="row"
-              spacing={1}
-              justifyContent="space-evenly"
-              alignItems="center"
-            >
-              <Grid item xs={12} md={8}>
-                <img src={home_files[53]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Thomas outside his old studio
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[55]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Cad developments
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[58]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Pukas Family with Bob, Cedric and Steve.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[57]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Bob Mc Tavish and Thomas surfing Geuthary
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={home_files[59]} width="100%" alt="meyerhoffer.com" />
-                <Typography className={classes.content_font} paragraph>
-                  Baja, San Somewhere. On our way to one of the favorite testing
-                  grounds. Stack of board in the back.
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
+      {/* SECTION 6 : THE JOURNEY  AND THE PEOPLE.*/}
+      <Grid container item spacing={6}>
+        <Grid item xs={12}>
+          <Typography variant="h4" paragraph className={classes.title_font}>
+            THE JOURNEY <br />
+            AND THE PEOPLE.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <img
+            src={home_files[49]}
+            width="100%"
+            height="100%"
+            alt="meyerhoffer.com"
+          />
+          <Typography className={classes.content_font} paragraph>
+            Original Board
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <img
+            src={home_files[50]}
+            width="100%"
+            height="100%"
+            alt="meyerhoffer.com"
+          />
+          <Typography className={classes.content_font} paragraph>
+            Thomas first boards, featured in The New York Times and at The
+            Cooper Hewitt Triennial in 1996
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <img src={home_files[51]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            LegoZoo one of Thomas first boards, featured in The Surfers Journal
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={7}>
+          <img src={home_files[52]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Shapings
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={7}>
+          <img src={home_files[53]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Thomas outside his old studio
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={7}>
+          <img src={home_files[54]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Mike with Original 9.1
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <img src={home_files[55]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Cad developments
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <img src={home_files[56]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Quiver from 2016
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <img src={home_files[57]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Bob Mc Tavish and Thomas surfing Geuthary
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={7}>
+          <img src={home_files[58]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Pukas Family with Bob, Cedric and Steve.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={7}>
+          <img src={home_files[59]} width="100%" alt="meyerhoffer.com" />
+          <Typography className={classes.content_font} paragraph>
+            Baja, San Somewhere. On our way to one of the favorite testing
+            grounds. Stack of board in the back.
+          </Typography>
         </Grid>
       </Grid>
 
       {/* SECTION 7 : Bio.*/}
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.bio_section}>
         <Grid container direction="column">
           <Grid item xs={12}>
             <Typography paragraph className={classes.content_font}>
@@ -404,11 +385,6 @@ const LinkPSD = () => {
           <Grid item xs={12}>
             <Typography paragraph className={classes.content_font}>
               YEAR: 2000-CURRENT
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography paragraph className={classes.content_font}>
-              PROJECT: THE SURFBOARD PROJECT
             </Typography>
           </Grid>
           <Grid item xs={12} md={8}>
