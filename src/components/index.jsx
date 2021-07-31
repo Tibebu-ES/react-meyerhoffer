@@ -13,6 +13,7 @@ import LinkSnowboard from "./main/bottom_links/LinkSnowboard";
 import LinkSoftComputer from "./main/bottom_links/LinkSoftComputer";
 import LinkSkigoggle from "./main/bottom_links/LinkSkigoggle";
 import LinkPorsche from "./main/bottom_links/LinkPorsche";
+import AboutMagazine from "./main/AboutMagazine";
 
 export {
   Home,
@@ -30,4 +31,5 @@ export {
   LinkSoftComputer,
   LinkSkigoggle,
   LinkPorsche,
+  AboutMagazine,
 };
