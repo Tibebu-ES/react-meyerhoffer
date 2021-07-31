@@ -52,12 +52,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#B2B1B9",
     marginTop: "50px",
   },
-  surfer_info_container: {
-    [theme.breakpoints.up("md")]: {
-      flexDirection: "row",
-    },
-    flexDirection: "column",
-  },
+
   hr_line: {
     color: "#000",
     backgroundColor: "#000",
@@ -75,6 +70,17 @@ const useStyles = makeStyles((theme) => ({
   },
   grid_item: {
     margin: "auto",
+  },
+
+  player_wrapper: {
+    position: "relative",
+    paddingTop: "56.25% ",
+  },
+
+  react_player: {
+    position: "absolute",
+    top: 0,
+    left: 0,
   },
 }));
 
@@ -132,18 +138,27 @@ const About = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} className={classes.surfer_info} alignItems="center">
-          <Grid container className={classes.surfer_info_container}>
+        <Grid
+          container
+          item
+          xs={12}
+          className={classes.surfer_info}
+          alignItems="center"
+        >
+          <Grid container spacing={4} item>
             <Grid item xs={12} md={6}>
-              <Typography className={classes.content_font}>
+              <Typography paragraph className={classes.content_font}>
                 SURFERS BLOOD MOVIE
               </Typography>
-              <ReactPlayer
-                controls={true}
-                url={about_files[4]}
-                width="100%"
-                height="100%"
-              />
+              <div className={classes.player_wrapper}>
+                <ReactPlayer
+                  className={classes.react_player}
+                  controls={true}
+                  url={"https://player.vimeo.com/video/341459769"}
+                  width="100%"
+                  height="100%"
+                />
+              </div>
             </Grid>
 
             <Grid item xs={12} md={4} className={classes.grid_item}>
@@ -163,15 +178,12 @@ const About = () => {
           </Grid>
         </Grid>
 
-        <Grid item xs={12}>
-          <Grid
-            container
-            justifyContent="space-around"
-            spacing={2}
-            className={classes.qoute_p}
-          >
+        <Grid container item xs={12}>
+          <Grid container item className={classes.qoute_p}>
             <Grid item xs={12} md={6}>
-              <Typography className={classes.content_font}>Listen</Typography>
+              <Typography paragraph className={classes.content_font}>
+                Listen
+              </Typography>
               <img src={about_files[3]} width="100%" alt="meyerhoffer.com" />
             </Grid>
             <Grid item xs={12} md={5} className={classes.grid_item}>
