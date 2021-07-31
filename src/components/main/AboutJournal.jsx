@@ -1,69 +1,57 @@
 import React from "react";
-import { Typography, Grid, Paper } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { about_files } from "../data/index";
+import ab1 from "../../assets/images/ab1.jpg";
+import ab2 from "../../assets/images/ab2.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: "#B6C9F0",
+    padding: "10vw 6.25vw  0 6.25vw",
+  },
+  content: {
     fontFamily: "Century",
-  },
-  para_big: {
-    marginLeft: "40px",
-    marginRight: "40px",
-    marginBottom: "20px",
-    fontSize: "8em",
-  },
-  para_bottom: {
-    marginLeft: "40px",
-    marginBottom: "10px",
-    fontSize: "8em",
-  },
-  para_qoute: {
-    marginBottom: "50px",
-    marginTop: "10px",
-    marginLeft: "40px",
-    marginRight: "40px",
-  },
-  para_title: {
+    fontSize: "13px",
     marginTop: "25px",
-    marginBottom: "10px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "11px",
+    },
+  },
+  title: {
+    fontFamily: "GenathDisplay",
+    fontWeight: "400px",
+    fontSize: "56px",
+    marginBottom: "50px",
+    marginTop: "30px",
   },
 }));
 
 const AboutJournal = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="column" className={classes.root}>
-      <Grid item xs={12} className={classes.para_title}>
-        <Typography variant="h4" align="center">
-          The Surfers Journal
+    <Grid
+      container
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      className={classes.root}
+    >
+      <Grid item xs={6} md={5}>
+        <img src={ab1} width="100%" height="100%" alt="thomasmeyerhoffer.com" />
+      </Grid>
+
+      <Grid item xs={12}>
+        <Typography className={classes.title}>
+          The Surfers <br />
+          Journal
         </Typography>
       </Grid>
-      <Grid item xs={12} style={{ margin: "20px" }}>
-        <Grid container spacing={2}>
-          <Grid item md={6}>
-            <Paper style={{ padding: "10px" }}>
-              <img
-                src={about_files[8]}
-                style={{ width: "50%", height: "240px" }}
-                alt="thomasmeyerhoffer.com"
-              />
-            </Paper>
-          </Grid>
-          <Grid item md={6}>
-            <Paper style={{ padding: "10px" }}>
-              <img
-                src={about_files[9]}
-                style={{ width: "70%" }}
-                alt="thomasmeyerhoffer.com"
-              />
-            </Paper>
-          </Grid>
-        </Grid>
+
+      <Grid item xs={6} md={5}>
+        <img src={ab2} width="100%" height="100%" alt="thomasmeyerhoffer.com" />
       </Grid>
-      <Grid item xs={12} className={classes.para_big}>
-        <Typography variant="body1" paragraph align="justify">
+
+      <Grid item xs={12} md={9}>
+        <Typography align="justify" className={classes.content}>
           We’re used to approaching surfboard design from a performance matrix:
           Faster. Lighter. Looser. Higher. New materials, sharper
           edges,inhalations and exhalations of volume, more fins, more concaves,
@@ -71,9 +59,8 @@ const AboutJournal = () => {
           greatest rewards tend toward matters of feel, our purest memories
           passion flashes: Hunger. Elation. Frustration. Calm.
         </Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_big}>
-        <Typography variant="body1" paragraph align="justify">
+
+        <Typography align="justify" className={classes.content}>
           What if we designed boards from that emotional angle? What if we
           sought out designs that amplified the surfing story unfolding with
           every ride? What if there were elements in the board itself that
@@ -92,16 +79,14 @@ const AboutJournal = () => {
           he applied his rigorous—yet thoroughly organic— approach to the foam
           and cloth beneath his feet.
         </Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_qoute}>
-        <Typography variant="h5" align="center">
+
+        <Typography className={classes.title}>
           “I was really curious about how far you could take the meaning of the
           performance act on a surfboard into a design that tells that story and
           (still) be able to ride the board”
         </Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_big}>
-        <Typography variant="body1" paragraph align="justify">
+
+        <Typography align="justify" className={classes.content}>
           His interests lie in the classical longboard experience, flowing down
           the line on a small point wave. Or, in narrative terms, an angle-in
           take off, a quick acquisition of trim for max hull speed, an
@@ -159,18 +144,21 @@ const AboutJournal = () => {
           less applied, more spatial planes, thereby speaking to the story of
           our ride.
         </Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_bottom}>
-        <Typography>MEDIA: Surfers Journal</Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_bottom}>
-        <Typography>YEAR: February 1998</Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_bottom}>
-        <Typography>TITLE: And how does that make you feel?</Typography>
-      </Grid>
-      <Grid item xs={12} className={classes.para_bottom}>
-        <Typography>CREDITS: By Scott Hulet</Typography>
+
+        <Typography className={classes.content}>
+          MEDIA: Surfers Journal
+        </Typography>
+
+        <Typography className={classes.content}>YEAR: February 1998</Typography>
+
+        <Typography className={classes.content}>
+          {" "}
+          TITLE: And how does that make you feel?
+        </Typography>
+
+        <Typography className={classes.content}>
+          CREDITS: By Scott Hulet
+        </Typography>
       </Grid>
     </Grid>
   );
