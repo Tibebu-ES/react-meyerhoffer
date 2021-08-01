@@ -21,6 +21,7 @@ import {
   LinkCharge,
   LinkCloth,
   LinkGlass,
+  LinkPowering,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -51,6 +52,7 @@ function App() {
         <Route exact path="/archive-charge" component={LinkCharge} />
         <Route exact path="/archive-clothing" component={LinkCloth} />
         <Route exact path="/archive-glass" component={LinkGlass} />
+        <Route exact path="/archive-powerring" component={LinkPowering} />
       </Switch>
       <Footer />
     </div>
