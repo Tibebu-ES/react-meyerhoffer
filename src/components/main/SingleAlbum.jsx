@@ -57,16 +57,11 @@ const SingleAlbum = (props) => {
         <Typography variant="span">
           <Box display="flex" flexDirection="column">
             <Box>
-              <Link to="/" className={classes.itemLink}>
-                {" "}
+              <a className={classes.itemLink} href={props.file.type}>
                 {props.file.caption}
-              </Link>
-            </Box>
-            <Box>
-              <Link to="/" className={classes.itemLink}>
-                {" "}
-                <strong>{props.file.price}</strong>
-              </Link>
+                <br />
+                {props.file.price}
+              </a>
             </Box>
           </Box>
         </Typography>

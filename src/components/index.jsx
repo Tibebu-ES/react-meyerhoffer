@@ -15,6 +15,14 @@ import LinkSkigoggle from "./main/bottom_links/LinkSkigoggle";
 import LinkPorsche from "./main/bottom_links/LinkPorsche";
 import AboutMagazine from "./main/AboutMagazine";
 import AboutJournal from "./main/AboutJournal";
+import LinkSoundBox from "./main/object_links/LinkSoundBox";
+import LinkCharge from "./main/object_links/LinkCharge";
+import LinkCloth from "./main/object_links/LinkCloth";
+import LinkGlass from "./main/object_links/LinkGlass";
+import LinkPowering from "./main/object_links/LinkPowering";
+import LinkNeilpryde from "./main/object_links/LinkNeilpryde";
+import LinkDanger from "./main/object_links/LinkDanger";
+import LinkCappellini from "./main/object_links/LinkCappellini";
 
 export {
   Home,
@@ -34,4 +42,12 @@ export {
   LinkPorsche,
   AboutMagazine,
   AboutJournal,
+  LinkSoundBox,
+  LinkCharge,
+  LinkCloth,
+  LinkGlass,
+  LinkPowering,
+  LinkNeilpryde,
+  LinkDanger,
+  LinkCappellini,
 };

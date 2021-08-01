@@ -17,6 +17,14 @@ import {
   LinkPorsche,
   AboutMagazine,
   AboutJournal,
+  LinkSoundBox,
+  LinkCharge,
+  LinkCloth,
+  LinkGlass,
+  LinkPowering,
+  LinkNeilpryde,
+  LinkDanger,
+  LinkCappellini,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -43,6 +51,14 @@ function App() {
         <Route exact path="/archive-porsche" component={LinkPorsche} />
         <Route exact path="/outsidemagazine" component={AboutMagazine} />
         <Route exact path="/surfersjournal" component={AboutJournal} />
+        <Route exact path="/archive-sound" component={LinkSoundBox} />
+        <Route exact path="/archive-charge" component={LinkCharge} />
+        <Route exact path="/archive-clothing" component={LinkCloth} />
+        <Route exact path="/archive-glass" component={LinkGlass} />
+        <Route exact path="/archive-powerring" component={LinkPowering} />
+        <Route exact path="/archive-neilpryde" component={LinkNeilpryde} />
+        <Route exact path="/archive-danger" component={LinkDanger} />
+        <Route exact path="/archive-cappellini" component={LinkCappellini} />
       </Switch>
       <Footer />
     </div>
