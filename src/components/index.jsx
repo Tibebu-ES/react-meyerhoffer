@@ -16,6 +16,7 @@ import LinkPorsche from "./main/bottom_links/LinkPorsche";
 import AboutMagazine from "./main/AboutMagazine";
 import AboutJournal from "./main/AboutJournal";
 import LinkSoundBox from "./main/object_links/LinkSoundBox";
+import LinkCharge from "./main/object_links/LinkCharge";
 
 export {
   Home,
@@ -36,4 +37,5 @@ export {
   AboutMagazine,
   AboutJournal,
   LinkSoundBox,
+  LinkCharge,
 };

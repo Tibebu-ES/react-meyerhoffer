@@ -18,6 +18,7 @@ import {
   AboutMagazine,
   AboutJournal,
   LinkSoundBox,
+  LinkCharge,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -45,6 +46,7 @@ function App() {
         <Route exact path="/outsidemagazine" component={AboutMagazine} />
         <Route exact path="/surfersjournal" component={AboutJournal} />
         <Route exact path="/archive-sound" component={LinkSoundBox} />
+        <Route exact path="/archive-charge" component={LinkCharge} />
       </Switch>
       <Footer />
     </div>
