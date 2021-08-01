@@ -18,6 +18,7 @@ import AboutJournal from "./main/AboutJournal";
 import LinkSoundBox from "./main/object_links/LinkSoundBox";
 import LinkCharge from "./main/object_links/LinkCharge";
 import LinkCloth from "./main/object_links/LinkCloth";
+import LinkGlass from "./main/object_links/LinkGlass";
 
 export {
   Home,
@@ -40,4 +41,5 @@ export {
   LinkSoundBox,
   LinkCharge,
   LinkCloth,
+  LinkGlass,
 };
