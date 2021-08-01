@@ -53,7 +53,7 @@ const Objects = () => {
       </Grid>
       <Grid container spacing={10}>
         {items.map((file) => (
-          <Grid item key={file} xs={12} sm={6} md={4}>
+          <Grid item key={file} xs={6} md={4}>
             {file.asset === items[4].asset ||
             file.asset === items[8].asset ||
             file.asset === items[26].asset ? (
