@@ -7,7 +7,7 @@ import Shop from "../Shop";
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    padding: "10vw 6.25vw  0 6.25vw;",
+    padding: "10vw 6.25vw  0 6.25vw",
   },
   content_font: {
     fontFamily: "Century",
@@ -36,6 +36,16 @@ const useStyle = makeStyles((theme) => ({
   img: { width: "100%", height: "auto" },
   bio_section: {
     marginTop: "80px",
+  },
+  player_wrapper: {
+    position: "relative",
+    paddingTop: "56.25% ",
+  },
+
+  react_player: {
+    position: "absolute",
+    top: 0,
+    left: 0,
   },
 }));
 
@@ -218,12 +228,16 @@ const LinkPSD = () => {
         </Grid>
 
         <Grid item xs={12} md={9}>
-          <ReactPlayer
-            controls={true}
-            url={home_files[62]}
-            width="100%"
-            height="100%"
-          />
+          <div className={classes.player_wrapper}>
+            <ReactPlayer
+              className={classes.react_player}
+              controls={true}
+              url={"https://player.vimeo.com/video/341459769"}
+              width="100%"
+              height="100%"
+            />
+          </div>
+
           <Typography className={classes.content_font} paragraph>
             Watch SURFERS BLOOD. The award winning surf movie by Patrick Trefz.
             Watch Thomas together with Basque surfers Kepa Acero, Natxo Gonzalez
@@ -231,6 +245,7 @@ const LinkPSD = () => {
             Shawn Barron. 2016.
           </Typography>
         </Grid>
+
         <Grid item xs={6} md={5}>
           <img src={home_files[61]} width="100%" alt="meyerhoffer.com" />
           <Typography className={classes.content_font} paragraph>
