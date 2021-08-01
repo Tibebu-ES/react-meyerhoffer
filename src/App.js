@@ -15,6 +15,8 @@ import {
   LinkSoftComputer,
   LinkSkigoggle,
   LinkPorsche,
+  AboutMagazine,
+  AboutJournal,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -39,6 +41,8 @@ function App() {
         <Route exact path="/archive-chumby" component={LinkSoftComputer} />
         <Route exact path="/archive-skigoggles" component={LinkSkigoggle} />
         <Route exact path="/archive-porsche" component={LinkPorsche} />
+        <Route exact path="/outsidemagazine" component={AboutMagazine} />
+        <Route exact path="/surfersjournal" component={AboutJournal} />
       </Switch>
       <Footer />
     </div>
