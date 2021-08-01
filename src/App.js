@@ -23,6 +23,7 @@ import {
   LinkGlass,
   LinkPowering,
   LinkNeilpryde,
+  LinkDanger,
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
@@ -55,6 +56,7 @@ function App() {
         <Route exact path="/archive-glass" component={LinkGlass} />
         <Route exact path="/archive-powerring" component={LinkPowering} />
         <Route exact path="/archive-neilpryde" component={LinkNeilpryde} />
+        <Route exact path="/archive-danger" component={LinkDanger} />
       </Switch>
       <Footer />
     </div>

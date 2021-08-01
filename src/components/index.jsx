@@ -21,6 +21,7 @@ import LinkCloth from "./main/object_links/LinkCloth";
 import LinkGlass from "./main/object_links/LinkGlass";
 import LinkPowering from "./main/object_links/LinkPowering";
 import LinkNeilpryde from "./main/object_links/LinkNeilpryde";
+import LinkDanger from "./main/object_links/LinkDanger";
 
 export {
   Home,
@@ -46,4 +47,5 @@ export {
   LinkGlass,
   LinkPowering,
   LinkNeilpryde,
+  LinkDanger,
 };
