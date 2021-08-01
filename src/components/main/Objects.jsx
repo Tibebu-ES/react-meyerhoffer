@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Objects = () => {
   const classes = useStyles();
-
+  const items = object_files.slice(0, 39);
   return (
     <Container className={classes.cardGrid} maxWidth="lg">
       <Grid
@@ -52,11 +52,11 @@ const Objects = () => {
         </Grid>
       </Grid>
       <Grid container spacing={10}>
-        {object_files.map((file) => (
+        {items.map((file) => (
           <Grid item key={file} xs={12} sm={6} md={4}>
-            {file.asset === object_files[4].asset ||
-            file.asset === object_files[8].asset ||
-            file.asset === object_files[26].asset ? (
+            {file.asset === items[4].asset ||
+            file.asset === items[8].asset ||
+            file.asset === items[26].asset ? (
               <SingleAlbum file={file} fileType="video" />
             ) : (
               <SingleAlbum file={file} fileType="image" />
