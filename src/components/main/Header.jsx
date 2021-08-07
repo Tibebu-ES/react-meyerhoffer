@@ -6,23 +6,25 @@ import sign_video from "../../assets/videos/SIGNATURE.gif";
 const useStyles = makeStyles((theme) => ({
   header_root: {},
   header_child_player: {
-    padding: "10px",
     [theme.breakpoints.down("sm")]: {
       order: 2,
     },
   },
   header_child_typo: {
-    padding: "10px",
+    padding: "15px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "5px",
+    },
     [theme.breakpoints.down("sm")]: {
       order: 1,
     },
   },
   header_child_typo_parag: {
-    fontSize: "14px",
+    fontSize: "13px",
     fontFamily: "Century",
     textAlign: "justify",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "12px",
+      fontSize: "10px",
     },
   },
 }));
@@ -30,12 +32,12 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   return (
-    <Grid container className={classes.header_root}>
+    <Grid container>
       <Grid item xs={12} md={4} className={classes.header_child_player}>
         <img src={sign_video} width="100%" alt="Logo"></img>
       </Grid>
       <Grid item xs={12} md={8} className={classes.header_child_typo}>
-        <Typography className={classes.header_child_typo_parag}>
+        <p className={classes.header_child_typo_parag}>
           Born in Sweden in 1965, Thomas Meyerhoffer is a creator and visionary.
           After earning a degree in Industrial Design from Art Center, he
           started his journey with an internship at Porsche, only to Go West to
@@ -46,7 +48,7 @@ const Header = () => {
           combine the fields of art, craft and technology. These theories,
           merged with contemporary culture, make up Meyerhoffer’s design
           practice today.
-        </Typography>
+        </p>
       </Grid>
     </Grid>
   );
