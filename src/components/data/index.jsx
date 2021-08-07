@@ -67,11 +67,11 @@ import h65 from "../../assets/images/ob_link5/ob_cap5.jpg";
 import h66 from "../../assets/images/ob_link5/ob_cap6.jpg";
 
 // home component
-import c00 from "../../assets/images/h2.gif";
+import c00 from "../../assets/videos/LatchDraw.mp4";
 import c01 from "../../assets/images/h3.jpg";
-import c02 from "../../assets/images/h4.gif";
-import c03 from "../../assets/images/h5.gif";
-import c04 from "../../assets/images/h6.gif";
+import c02 from "../../assets/videos/SURFRING.mp4";
+import c03 from "../../assets/videos/SHITSHOW.mp4";
+import c04 from "../../assets/videos/BOARDHEAD.mp4";
 import c1 from "../../assets/images/c1.jpg";
 import c2 from "../../assets/images/c2.jpg";
 import c3 from "../../assets/images/c3.jpg";
