@@ -61,7 +61,7 @@ const LinkLatch = () => {
           </Grid>
         </Grid>
 
-        <Grid container spacing={10} direction="column">
+        <Grid container spacing={4} direction="column">
           <Grid item xs={6} className={classes.shop_item_vertical}>
             <img
               src={object_files[0].asset}
