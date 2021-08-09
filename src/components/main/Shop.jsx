@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "GenathDisplay",
     fontWeight: "bold",
     fontSize: "56px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "20px",
+    },
   },
 }));
 
@@ -55,7 +58,7 @@ const Shop = () => {
         </Typography>
       </Grid>
 
-      <Grid container spacing={10}>
+      <Grid container spacing={4}>
         {shop_files.map((file) => (
           <Grid item key={file} xs={12} sm={6} md={4}>
             {file.asset === shop_files[0].asset ||
