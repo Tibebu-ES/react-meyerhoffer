@@ -1,6 +1,5 @@
 import React from "react";
-import ReactPlayer from "react-player";
-import { Paper, Container, Grid, Typography } from "@material-ui/core";
+import { Paper, Grid, Typography } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import { home_files } from "../data/index";
 import { makeStyles } from "@material-ui/core/styles";
@@ -72,12 +71,10 @@ const Home = () => {
   return (
     <Grid container className={classes.root}>
       <Grid item xs={12}>
-        <ReactPlayer
-          url={home_files[0]}
-          playing="true"
-          loop="true"
-          width="100%"
-          height="100%"
+        <img
+          src={home_files[0]}
+          className={classes.images}
+          alt="meyerhoffer.com"
         />
       </Grid>
 
@@ -106,12 +103,10 @@ const Home = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <ReactPlayer
-          url={home_files[2]}
-          playing="true"
-          loop="true"
-          width="100%"
-          height="100%"
+        <img
+          src={home_files[2]}
+          className={classes.images}
+          alt="meyerhoffer.com"
         />
       </Grid>
 
@@ -123,11 +118,7 @@ const Home = () => {
           alignItems="center"
         >
           <Grid item xs={10} md={10}>
-            <Carousel
-              navButtonsAlwaysVisible="true"
-              autoPlay="true"
-              animation="slide"
-            >
+            <Carousel autoPlay="true" animation="slide">
               {items.map((item, i) => (
                 <CarouselView key={i} item={item} />
               ))}
@@ -137,12 +128,10 @@ const Home = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <ReactPlayer
-          url={home_files[3]}
-          playing="true"
-          loop="true"
-          width="100%"
-          height="100%"
+        <img
+          src={home_files[3]}
+          className={classes.images}
+          alt="meyerhoffer.com"
         />
       </Grid>
 
@@ -153,12 +142,10 @@ const Home = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <ReactPlayer
-          url={home_files[4]}
-          playing="true"
-          loop="true"
-          width="100%"
-          height="100%"
+        <img
+          src={home_files[4]}
+          className={classes.images}
+          alt="meyerhoffer.com"
         />
       </Grid>
 
