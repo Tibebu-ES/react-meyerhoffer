@@ -37,12 +37,10 @@ const SingleAlbum = (props) => {
   return (
     <Card className={classes.card}>
       {props.fileType === "video" ? (
-        <ReactPlayer
-          playing={true}
-          loop={true}
-          url={props.file.asset}
-          width="100%"
-          height="100%"
+        <img
+          src={props.file.asset}
+          className={classes.images}
+          alt="meyerhoffer.com"
         />
       ) : (
         <CardMedia

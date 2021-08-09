@@ -47,7 +47,7 @@ const Objects = () => {
         </Typography>
       </Grid>
 
-      <Grid container spacing={10}>
+      <Grid container spacing={4}>
         {items.map((file) => (
           <Grid item key={file} xs={6} md={4}>
             {file.asset === items[4].asset ||
