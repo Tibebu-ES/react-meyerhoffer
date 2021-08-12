@@ -89,34 +89,28 @@ const About = () => {
 
   return (
     <Container className={classes.root}>
-      <Grid container direction="column" alignItems="center">
-        <Grid item xs={12}>
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="space-evenly"
-            spacing={2}
-          >
-            <Grid item xs={12} md={5}>
-              <img
-                src={about_files[0]}
-                width="100%"
-                height="100%"
-                alt="meyerhoffer.com"
-              />
-            </Grid>
-            <Grid item xs={12} md={5}>
-              <img
-                src={about_files[1]}
-                width="100%"
-                height="100%"
-                alt="meyerhoffer.com"
-              />
-            </Grid>
+      <Grid container spacing={4} direction="column">
+        <Grid item xs={6} md={4}>
+          <img
+            src={about_files[0]}
+            width="100%"
+            height="100%"
+            alt="meyerhoffer.com"
+          />
+        </Grid>
+
+        <Grid item container justifyContent="center" alignItems="center">
+          <Grid item xs={8}>
+            <img
+              src={about_files[1]}
+              width="100%"
+              height="100%"
+              alt="meyerhoffer.com"
+            />
           </Grid>
         </Grid>
 
-        <Grid item xs={12} md={10}>
+        <Grid item xs={12} md={12}>
           <Typography
             variant="body1"
             align="justify"
