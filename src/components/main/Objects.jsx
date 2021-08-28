@@ -7,25 +7,12 @@ import { ArrowBack } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    marginTop: "50px",
+    [theme.breakpoints.up("md")]: {
+      marginTop: "200px",
+    },
   },
-  card: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-  },
-  cardContent: {
-    flexGrow: 1,
-    background: "#a6d4fa",
-  },
-  itemLink: {
-    textDecoration: "none",
-  },
-  topTitle: {
-    marginBottom: "30px",
-    marginTop: "-60px",
-  },
+
   content_font: {
     fontFamily: "Century",
     fontSize: "11px",
