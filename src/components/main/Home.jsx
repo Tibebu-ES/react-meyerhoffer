@@ -7,8 +7,10 @@ import CarouselView from "./CarouselViewer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "150px",
-    padding: "10px",
+    marginTop: "50px",
+    [theme.breakpoints.up("md")]: {
+      marginTop: "150px",
+    },
   },
   drawerHeader: {
     background: "#1768AC",
@@ -28,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   img_title: {
     fontFamily: "Century",
+    fontSize: "13px",
+    color: "#000000",
   },
   grid_item: {
     marginBottom: "15px",
@@ -46,6 +50,19 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "10px",
       padding: "5px",
+    },
+  },
+  item_spacing: {
+    marginTop: "50px",
+    [theme.breakpoints.up("md")]: {
+      marginTop: "150px",
+    },
+  },
+  image_title_grid: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      padding: "20px",
+      display: "block",
     },
   },
 }));
@@ -78,13 +95,13 @@ const Home = () => {
         />
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.image_title_grid}>
         <a className={classes.img_title} href="/archive-latch">
           LATCH
         </a>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.item_spacing}>
         <Grid container direction="column">
           <Grid item>
             <img
@@ -96,13 +113,13 @@ const Home = () => {
         </Grid>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.image_title_grid}>
         <a className={classes.img_title} href="/archive-surf">
           SURFBOARDS
         </a>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.item_spacing}>
         <img
           src={home_files[2]}
           className={classes.images}
@@ -110,14 +127,9 @@ const Home = () => {
         />
       </Grid>
 
-      <Grid item xs={12}>
-        <Grid
-          style={{ marginTop: "150px", marginBottom: "150px" }}
-          container
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item xs={10} md={10}>
+      <Grid item xs={12} className={classes.item_spacing}>
+        <Grid container justifyContent="center" alignItems="center">
+          <Grid item xs={10} md={10} className={classes.item_spacing}>
             <Carousel autoPlay="true" animation="slide">
               {items.map((item, i) => (
                 <CarouselView key={i} item={item} />
@@ -127,7 +139,7 @@ const Home = () => {
         </Grid>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.item_spacing}>
         <img
           src={home_files[3]}
           className={classes.images}
@@ -135,13 +147,13 @@ const Home = () => {
         />
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.image_title_grid}>
         <a className={classes.img_title} href="/archive-latch">
           LATCH
         </a>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.item_spacing}>
         <img
           src={home_files[4]}
           className={classes.images}
@@ -150,9 +162,9 @@ const Home = () => {
       </Grid>
 
       {/*bootom links */}
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.item_spacing}>
         <Grid container justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={10}>
+          <Grid item xs={11} md={10}>
             <Grid container direction="row">
               <Grid item className={classes.grid_item}>
                 <a className={classes.btn_link} href="/archive-latch">

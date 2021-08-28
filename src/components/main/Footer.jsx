@@ -13,16 +13,28 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#000000",
     color: "#FFFFFF",
     marginTop: "10rem",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "2rem",
+    },
   },
   toolbar: {
     justifyContent: "flex-end",
-    minHeight: 128,
+    [theme.breakpoints.up("md")]: {
+      minHeight: 128,
+    },
   },
   toolbarItem: {
     marginRight: "1rem",
+    fontSize: "18px",
+    color: "#ffffff",
+    fontWeight: "normal",
     "&:hover": {
       textDecoration: "underline",
       cursor: "pointer",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "10px",
+      fontSize: "10px",
     },
   },
 }));
@@ -32,25 +44,16 @@ const Footer = () => {
   return (
     <AppBar className={classes.app_bar}>
       <Toolbar className={classes.toolbar}>
-        <Typography
-          className={classes.toolbarItem}
-          variant="body2"
-          color="inherit"
-        >
+        <Typography className={classes.toolbarItem}>
           <Link
             className={classes.toolbarItem}
             href="http://instagram.com/meyerhoffer"
             target="_blank"
-            color="inherit"
           >
             Follow
           </Link>
         </Typography>
-        <Typography
-          className={classes.toolbarItem}
-          variant="body2"
-          color="inherit"
-        >
+        <Typography className={classes.toolbarItem}>
           <Link
             className={classes.toolbarItem}
             href="mailto:info@meyerhoffer.com"
@@ -59,7 +62,7 @@ const Footer = () => {
             Contact
           </Link>
         </Typography>
-        <Typography variant="body2" color="inherit">
+        <Typography className={classes.toolbarItem}>
           © Meyerhoffer Inc.
         </Typography>
       </Toolbar>
