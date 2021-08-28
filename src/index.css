@@ -1,13 +1,46 @@
+@font-face {
+  font-family: "Century";
+  src: url("./assets/fonts/century.woff");
+}
+
+@font-face {
+  font-family: "GenathDisplay";
+  src: url("./assets/fonts/GenathDisplay.eot");
+}
+
+@font-face {
+  font-family: "GenathDisplay-Italic";
+  src: url("./assets/fonts/GenathDisplay-Italic.eot");
+}
+
+@font-face {
+  font-family: "Century Schoolbook";
+  src: url("./assets/fonts/CenturySchoolbookBT-Italic.woff");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Century, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1c1c1c;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app_root {
+  background: #ffffff;
+  font-family: Century;
+}
+
+.content_font {
+  font-family: Uchen;
+}
+
+.title_gent {
+  font-family: GenathDisplay;
+}
+
+.main_font {
+  font-family: Century;
 }

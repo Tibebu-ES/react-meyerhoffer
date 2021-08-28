@@ -28,7 +28,6 @@ import {
 } from "./components/index";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/main/Header";
-import "./assets/css/app.css";
 
 function App() {
   return (

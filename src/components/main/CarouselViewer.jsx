@@ -4,9 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   img_size: {
-    [theme.breakpoints.up("md")]: {
-      width: 700,
-    },
     height: "100%",
     width: "100%",
   },
@@ -15,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 17,
     },
     fontFamily: "Century",
-    justifyContent: "center",
     fontSize: "11px",
   },
 }));
@@ -29,7 +25,7 @@ const CarouselView = (props) => {
         className={classes.img_size}
         alt="meyerhoffer.com"
       />
-      <Typography variant="h6" className={classes.content_font}>
+      <Typography align="center" variant="h6" className={classes.content_font}>
         <strong>{props.item.caption}</strong>
       </Typography>
     </div>

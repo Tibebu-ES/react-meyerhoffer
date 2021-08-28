@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   app_bar: {
     position: "sticky",
     boxShadow: "none",
-    backgroundColor: "#fcfcff",
+    backgroundColor: "#ffffff",
   },
 
   nav_link: {

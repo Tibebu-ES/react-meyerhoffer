@@ -3,11 +3,11 @@ import h1 from "../../assets/images/1.jpg";
 import h2 from "../../assets/images/2.jpg";
 import h3 from "../../assets/images/3.jpg";
 import h4 from "../../assets/images/4.jpg";
-import h5 from "../../assets/videos/5.mp4";
+import h5 from "../../assets/images/5.gif";
 import h6 from "../../assets/images/6.jpg";
 import h7 from "../../assets/images/7.jpg";
 import h8 from "../../assets/images/8.jpg";
-import h9 from "../../assets/videos/9.mp4";
+import h9 from "../../assets/images/9.gif";
 import h10 from "../../assets/images/10.jpg";
 import h11 from "../../assets/images/11.jpg";
 import h12 from "../../assets/images/12.jpg";
@@ -25,7 +25,7 @@ import h23 from "../../assets/images/23.jpg";
 import h24 from "../../assets/images/24.jpg";
 import h25 from "../../assets/images/25.jpg";
 import h26 from "../../assets/images/26.jpg";
-import h27 from "../../assets/videos/27.mp4";
+import h27 from "../../assets/images/27.gif";
 import h28 from "../../assets/images/28.jpg";
 import h29 from "../../assets/images/29.jpg";
 import h30 from "../../assets/images/30.jpg";
@@ -66,12 +66,14 @@ import h64 from "../../assets/images/ob_link5/ob_cap4.jpg";
 import h65 from "../../assets/images/ob_link5/ob_cap5.jpg";
 import h66 from "../../assets/images/ob_link5/ob_cap6.jpg";
 
+import h67 from "../../assets/images/coke.gif";
+
 // home component
-import c00 from "../../assets/images/h2.gif";
+import c00 from "../../assets/videos/LatchDraw.gif";
 import c01 from "../../assets/images/h3.jpg";
-import c02 from "../../assets/images/h4.gif";
-import c03 from "../../assets/images/h5.gif";
-import c04 from "../../assets/images/h6.gif";
+import c02 from "../../assets/videos/SURFRING.gif";
+import c03 from "../../assets/videos/SHITSHOW.gif";
+import c04 from "../../assets/videos/BOARDHEAD.gif";
 import c1 from "../../assets/images/c1.jpg";
 import c2 from "../../assets/images/c2.jpg";
 import c3 from "../../assets/images/c3.jpg";
@@ -551,6 +553,7 @@ const object_files = [
   h64,
   h65,
   h66,
+  h67,
 ];
 
 const shop_files = [

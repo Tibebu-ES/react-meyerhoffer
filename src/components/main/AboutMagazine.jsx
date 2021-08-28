@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontFamily: "GenathDisplay",
-    fontWeight: "400px",
-    fontSize: "56px",
+    fontSize: "50px",
+    fontWeight: "700px",
+    lineHeight: "70px",
     marginBottom: "30px",
   },
 
@@ -75,7 +76,7 @@ const AboutMagazine = () => {
           before? It was so simple.”
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={8}>
         <Typography className={classes.title}>
           Meyerhoffer is obsessed with simplicity.
         </Typography>
