@@ -9,7 +9,11 @@ import audio from "../../assets/audio/intro.mp3";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "100px",
+    marginTop: "50px",
+    [theme.breakpoints.up("md")]: {
+      marginTop: "250px",
+      marginLeft: "60px",
+    },
   },
   heading: {
     fontSize: "18px",
@@ -48,6 +52,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "13px",
     },
   },
+  title_font: {
+    fontFamily: "GenathDisplay",
+    fontWeight: "bold",
+    fontSize: "56px",
+    lineHeight: "70px",
+    letterSpacing: "-2px",
+    marginLeft: "30px",
+  },
   interview: {
     background: "#B2B1B9",
     marginTop: "50px",
@@ -82,6 +94,13 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
   },
+
+  item_spacing: {
+    marginBottom: "20px",
+    [theme.breakpoints.up("md")]: {
+      marginBottom: "150px",
+    },
+  },
 }));
 
 const About = () => {
@@ -90,7 +109,7 @@ const About = () => {
   return (
     <Container className={classes.root}>
       <Grid container spacing={4} direction="column">
-        <Grid item xs={6} md={4}>
+        <Grid item xs={6} md={4} className={classes.item_spacing}>
           <img
             src={about_files[0]}
             width="100%"
@@ -99,8 +118,14 @@ const About = () => {
           />
         </Grid>
 
-        <Grid item container justifyContent="center" alignItems="center">
-          <Grid item xs={8}>
+        <Grid
+          item
+          container
+          justifyContent="center"
+          alignItems="center"
+          className={classes.item_spacing}
+        >
+          <Grid item xs={7}>
             <img
               src={about_files[1]}
               width="100%"
@@ -141,8 +166,10 @@ const About = () => {
         >
           <Grid container spacing={4} item>
             <Grid item xs={12} md={6}>
-              <Typography paragraph className={classes.content_font}>
-                SURFERS BLOOD MOVIE
+              <Typography paragraph className={classes.title_font}>
+                <i>
+                  SURFERS <br /> BLOOD
+                </i>
               </Typography>
               <div className={classes.player_wrapper}>
                 <ReactPlayer
@@ -175,8 +202,8 @@ const About = () => {
         <Grid container item xs={12}>
           <Grid container item className={classes.qoute_p}>
             <Grid item xs={12} md={6}>
-              <Typography paragraph className={classes.content_font}>
-                Listen
+              <Typography paragraph className={classes.title_font}>
+                <i>Listen</i>
               </Typography>
               <img src={about_files[3]} width="100%" alt="meyerhoffer.com" />
             </Grid>
@@ -223,10 +250,9 @@ const About = () => {
             paragraph
             className={classes.content_font}
           >
-            Thomas Meyerhoffer is the acclaimed creator of an extraordinarily
-            diverse range of successful products with universal appeal. His
-            simple and intuitive designs are experienced every day by many
-            millions of users around the world.
+            After taking positions at Apple, IDEO and Porsche, Meyerhoffer
+            founded his integrated design studio in Montara, California, in
+            1999.
           </Typography>
           <Typography
             align="justify"
